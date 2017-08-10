@@ -83,17 +83,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Coming Soon!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wn-tD-YMT">
-                                <rect key="frame" x="120" y="320" width="174" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZqI-MY-5QQ">
+                                <rect key="frame" x="20" y="0.0" width="374" height="736"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming Soon!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wn-tD-YMT">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="736"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.27176026461075731" blue="0.25932564414759707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="1Wn-tD-YMT" firstAttribute="leading" secondItem="qjg-tj-7Cb" secondAttribute="leadingMargin" constant="100" id="4CW-dd-Zj3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1Wn-tD-YMT" secondAttribute="trailing" constant="100" id="olB-PI-3xZ"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ZqI-MY-5QQ" secondAttribute="bottom" id="GJ4-tx-k3D"/>
+                            <constraint firstItem="ZqI-MY-5QQ" firstAttribute="leading" secondItem="qjg-tj-7Cb" secondAttribute="leadingMargin" id="OKe-hr-7lb"/>
+                            <constraint firstItem="ZqI-MY-5QQ" firstAttribute="top" secondItem="qjg-tj-7Cb" secondAttribute="topMargin" id="VXW-2s-n9f"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZqI-MY-5QQ" secondAttribute="trailing" id="bxm-td-GoO"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map View" image="map" id="58T-jj-Rx0"/>
@@ -175,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q5I-0x-qIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1793" y="876"/>
+            <point key="canvasLocation" x="1793" y="877"/>
         </scene>
     </scenes>
     <resources>
