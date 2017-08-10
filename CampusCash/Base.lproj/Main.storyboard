@@ -36,21 +36,11 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up for great deals!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcf-4f-Eo7">
-                                        <rect key="frame" x="0.0" y="87.666666666666686" width="374" height="575"/>
+                                        <rect key="frame" x="0.0" y="87.666666666666686" width="374" height="628.33333333333326"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUx-nN-mPZ">
-                                        <rect key="frame" x="0.0" y="662.66666666666652" width="374" height="53.333333333333371"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="mUx-nN-mPZ" secondAttribute="height" multiplier="744:106" id="laE-ku-mC1"/>
-                                        </constraints>
-                                        <state key="normal" title="Button" image="bottomBar"/>
-                                        <connections>
-                                            <segue destination="OHf-c4-ILx" kind="show" id="GfN-W2-a9d"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -66,6 +56,9 @@
                             <constraint firstAttribute="trailing" secondItem="smM-ND-3W7" secondAttribute="trailing" id="uMn-vC-yoA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="OHf-c4-ILx" kind="custom" identifier="firstSegue" customClass="firstSegue" customModule="CampusCash" customModuleProvider="target" id="5ai-uc-iFA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -186,7 +179,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bottomBar" width="372" height="53"/>
         <image name="boulderBackground" width="375" height="667"/>
         <image name="campus" width="33" height="33"/>
         <image name="categories" width="33" height="33"/>

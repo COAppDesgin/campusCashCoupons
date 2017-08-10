@@ -17,6 +17,7 @@
 		99D73A351F3AF03A00257F14 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D73A341F3AF03A00257F14 /* CategoryViewController.swift */; };
 		ACE228D03CA149991D0BE59F /* Pods_CampusCashTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18B2AC3A2D6CE1F7827C6A0 /* Pods_CampusCashTests.framework */; };
 		D53869D9C8386DEED350AB6A /* Pods_CampusCash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55883FEE85958F1362E794A9 /* Pods_CampusCash.framework */; };
+		ED1FCFC91F3BE78C00F94A17 /* firstSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1FCFC81F3BE78C00F94A17 /* firstSegue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		ACF72AC9B1D87C6629287BA8 /* Pods-CampusCashTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusCashTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CampusCashTests/Pods-CampusCashTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B18B2AC3A2D6CE1F7827C6A0 /* Pods_CampusCashTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampusCashTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2BBB0724A945DC4A4CA8350 /* Pods-CampusCashTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusCashTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CampusCashTests/Pods-CampusCashTests.release.xcconfig"; sourceTree = "<group>"; };
+		ED1FCFC81F3BE78C00F94A17 /* firstSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = firstSegue.swift; sourceTree = "<group>"; };
 		F070D4F3D907804C77698B53 /* Pods-CampusCash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusCash.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CampusCash/Pods-CampusCash.debug.xcconfig"; sourceTree = "<group>"; };
 		F179CDC68D732840909A68D8 /* Pods-CampusCashUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusCashUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CampusCashUITests/Pods-CampusCashUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F3E018E1B97EB1F35B151E7C /* Pods-CampusCash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusCash.release.xcconfig"; path = "Pods/Target Support Files/Pods-CampusCash/Pods-CampusCash.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				99D73A001F3AD54900257F14 /* AppDelegate.swift */,
+				ED1FCFC81F3BE78C00F94A17 /* firstSegue.swift */,
 				99D73A021F3AD54A00257F14 /* ViewController.swift */,
 				99D73A041F3AD54A00257F14 /* Main.storyboard */,
 				99D73A071F3AD54A00257F14 /* Assets.xcassets */,
@@ -321,7 +324,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		1B0692581457348AF0C289E4 /* [CP] Check Pods Manifest.lock */ = {
@@ -339,7 +342,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		544F9BC0C3F61D248D20F7CD /* [CP] Copy Pods Resources */ = {
@@ -422,7 +425,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		DCC568B26F7499542F0561DF /* [CP] Embed Pods Frameworks */ = {
@@ -462,6 +465,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED1FCFC91F3BE78C00F94A17 /* firstSegue.swift in Sources */,
 				99D73A031F3AD54A00257F14 /* ViewController.swift in Sources */,
 				99D73A351F3AF03A00257F14 /* CategoryViewController.swift in Sources */,
 				99D73A011F3AD54900257F14 /* AppDelegate.swift in Sources */,
