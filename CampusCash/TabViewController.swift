@@ -51,7 +51,6 @@ class TabViewController: UITabBarController {
     
     func sendTopBar() {
         performSegue(withIdentifier: "unwindSegueToVC1", sender: self)
-        print("hi")
     }
 
 }

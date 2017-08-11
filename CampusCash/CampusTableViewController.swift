@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CampusTableViewController: UIViewController, UITableViewDelegate {
+class CampusTableViewController: UITableViewController {
 
     lazy var searchBar:UISearchBar = UISearchBar()
     
