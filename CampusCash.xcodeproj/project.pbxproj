@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4C021C16A387651D73943A1D /* Pods_CampusCashUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D8AF2996D30DAE68297242 /* Pods_CampusCashUITests.framework */; };
+		99C61F881F3BEEB90009E5E0 /* CampusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C61F871F3BEEB90009E5E0 /* CampusViewController.swift */; };
 		99D73A011F3AD54900257F14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D73A001F3AD54900257F14 /* AppDelegate.swift */; };
 		99D73A031F3AD54A00257F14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D73A021F3AD54A00257F14 /* ViewController.swift */; };
 		99D73A061F3AD54A00257F14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D73A041F3AD54A00257F14 /* Main.storyboard */; };
 		99D73A081F3AD54A00257F14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99D73A071F3AD54A00257F14 /* Assets.xcassets */; };
 		99D73A161F3AD54A00257F14 /* CampusCashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D73A151F3AD54A00257F14 /* CampusCashTests.swift */; };
 		99D73A211F3AD54A00257F14 /* CampusCashUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D73A201F3AD54A00257F14 /* CampusCashUITests.swift */; };
-		99D73A351F3AF03A00257F14 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D73A341F3AF03A00257F14 /* CategoryViewController.swift */; };
 		ACE228D03CA149991D0BE59F /* Pods_CampusCashTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18B2AC3A2D6CE1F7827C6A0 /* Pods_CampusCashTests.framework */; };
 		D53869D9C8386DEED350AB6A /* Pods_CampusCash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55883FEE85958F1362E794A9 /* Pods_CampusCash.framework */; };
 		ED1FCFC91F3BE78C00F94A17 /* firstSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1FCFC81F3BE78C00F94A17 /* firstSegue.swift */; };
@@ -40,6 +40,7 @@
 /* Begin PBXFileReference section */
 		55883FEE85958F1362E794A9 /* Pods_CampusCash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampusCash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9945C4392261CD6B031750E6 /* Pods-CampusCashUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusCashUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CampusCashUITests/Pods-CampusCashUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		99C61F871F3BEEB90009E5E0 /* CampusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampusViewController.swift; sourceTree = "<group>"; };
 		99D739FD1F3AD54900257F14 /* CampusCash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampusCash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D73A001F3AD54900257F14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99D73A021F3AD54A00257F14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +53,6 @@
 		99D73A1C1F3AD54A00257F14 /* CampusCashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CampusCashUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D73A201F3AD54A00257F14 /* CampusCashUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusCashUITests.swift; sourceTree = "<group>"; };
 		99D73A221F3AD54A00257F14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		99D73A341F3AF03A00257F14 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		A0D8AF2996D30DAE68297242 /* Pods_CampusCashUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampusCashUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF72AC9B1D87C6629287BA8 /* Pods-CampusCashTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusCashTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CampusCashTests/Pods-CampusCashTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B18B2AC3A2D6CE1F7827C6A0 /* Pods_CampusCashTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampusCashTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,7 +135,7 @@
 				99D73A041F3AD54A00257F14 /* Main.storyboard */,
 				99D73A071F3AD54A00257F14 /* Assets.xcassets */,
 				99D73A0C1F3AD54A00257F14 /* Info.plist */,
-				99D73A341F3AF03A00257F14 /* CategoryViewController.swift */,
+				99C61F871F3BEEB90009E5E0 /* CampusViewController.swift */,
 			);
 			path = CampusCash;
 			sourceTree = "<group>";
@@ -466,8 +466,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED1FCFC91F3BE78C00F94A17 /* firstSegue.swift in Sources */,
+				99C61F881F3BEEB90009E5E0 /* CampusViewController.swift in Sources */,
 				99D73A031F3AD54A00257F14 /* ViewController.swift in Sources */,
-				99D73A351F3AF03A00257F14 /* CategoryViewController.swift in Sources */,
 				99D73A011F3AD54900257F14 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -125,7 +125,7 @@
         <scene sceneID="OD9-FS-E3i">
             <objects>
                 <tableViewController id="g3j-cB-Qu9" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qzM-6A-3iq">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qzM-6A-3iq" customClass="CampusViewController">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -169,7 +169,19 @@
                     <view key="view" contentMode="scaleToFill" id="Ih7-pE-WOA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xgq-zk-N5v">
+                                <rect key="frame" x="20" y="0.0" width="374" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="xgq-zk-N5v" secondAttribute="trailing" id="Hd9-42-AIi"/>
+                            <constraint firstItem="xgq-zk-N5v" firstAttribute="leading" secondItem="Ih7-pE-WOA" secondAttribute="leadingMargin" id="ds5-wQ-hvZ"/>
+                            <constraint firstItem="xgq-zk-N5v" firstAttribute="top" secondItem="Ih7-pE-WOA" secondAttribute="topMargin" id="t23-Mg-dVl"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="xgq-zk-N5v" secondAttribute="bottom" id="xEL-zn-wso"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Categories" image="categories" id="oax-6e-FMm"/>
                 </viewController>
