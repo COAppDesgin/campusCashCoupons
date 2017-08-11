@@ -20,27 +20,38 @@ class ViewController: UIViewController {
     var scrollView: UIScrollView!
     var imageArray = [UIImage]()
     var selectCity: UILabel!
-    
+
     var searchButton: UIButton!
     let searchButtonStartingCornerRadius: CGFloat = 20
     let searchButtonEndingCornerRadius: CGFloat = 0
     let searchButtonEndingAlpha: CGFloat = 0
     let searchButtonStartingAlpha: CGFloat = 1
+    var scrollSnapWidth: CGFloat!
+    var lastOffset: CGFloat!
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupBackground()
         setupImageView()
         configurePageControl()
         setupBottomBar()
         setupSearchButton()
         addSelectCityLabel()
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func setupBackground() {
+        let background = UIImage(named: "background")
+        let backgroundView = UIImageView(image: background)
+        backgroundView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        view.addSubview(backgroundView)
     }
     
     func configurePageControl() {
@@ -71,6 +82,19 @@ class ViewController: UIViewController {
         pageControl.currentPageIndicatorTintColor = UIColor.green
         view.addSubview(pageControl)
         
+    }
+    
+    func setContentOffset(scrollView: UIScrollView) {
+        
+        let scrollSnapWidth = CGFloat(view.frame.width)
+        let stopOver = scrollSnapWidth
+        var lastOffset = round(scrollView.contentOffset.x / stopOver) * stopOver
+        lastOffset = max(0, min(lastOffset, scrollView.contentSize.width - scrollView.frame.width))
+        
+        scrollView.setContentOffset(CGPoint(x: scrollView.contentOffset.x, y: lastOffset), animated: true)
+        
+        scrollView.isScrollEnabled = true
+        setContentOffset(scrollView: scrollView)
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
@@ -124,16 +148,17 @@ class ViewController: UIViewController {
     
     func setupSearchButton() {
         searchButton = UIButton(type: .custom)
+        let image = UIImage(named: "grey")
         searchButton.translatesAutoresizingMaskIntoConstraints = false
         searchButton.addTarget(self, action: #selector(searchClicked), for: .touchUpInside)
-        searchButton.setTitle("Search..", for: .normal)
-        searchButton.backgroundColor = UIColor.init(red: 72/255, green: 69/255, blue: 55/255, alpha: 1)
+//        searchButton.setTitle("Search..", for: .normal)
+        searchButton.alpha = 0.8
+        searchButton.setImage(image, for: .normal)
         searchButton.layer.cornerRadius = searchButtonStartingCornerRadius
-        searchButton.isHighlighted = true
         view.addSubview(searchButton)
         
         searchButton.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 16).isActive = true
-        searchButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -350).isActive = true
+        searchButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -315).isActive = true
         searchButton.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -32).isActive = true
         searchButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
@@ -160,6 +185,32 @@ class ViewController: UIViewController {
 
     }
     
+}
+
+extension ViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        if scrollView.contentOffset.y > lastOffset + scrollSnapWidth{
+            scrollView.isScrollEnabled = false
+        } else if scrollView.contentOffset.y < lastOffset - scrollSnapWidth {
+            scrollView.isScrollEnabled = false
+        }
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        
+        guard !decelerate else {
+            return
+        }
+        
+        setContentOffset(scrollView: scrollView)
+    }
+    
+    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+        
+        setContentOffset(scrollView: scrollView)
+    }
 }
 
 

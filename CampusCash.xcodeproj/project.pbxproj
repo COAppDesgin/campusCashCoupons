@@ -128,6 +128,37 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4D8CD4DC1F3E44920036A069 /* Segue */ = {
+			isa = PBXGroup;
+			children = (
+				ED1FCFC81F3BE78C00F94A17 /* firstSegue.swift */,
+				4DAFBE621F3D5C2800CFBF57 /* secondSegue.swift */,
+			);
+			name = Segue;
+			sourceTree = "<group>";
+		};
+		4D8CD4DD1F3E44A40036A069 /* View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4D1E09EA1F3E0D6C008E25BE /* TableViewCell1.swift */,
+				4D1E09EB1F3E0D6C008E25BE /* TableViewCell1.xib */,
+				4D1E09F21F3E3061008E25BE /* TableViewCell2.swift */,
+				4D1E09F31F3E3061008E25BE /* TableViewCell2.xib */,
+			);
+			name = "View Cells";
+			sourceTree = "<group>";
+		};
+		4D8CD4DE1F3E44CE0036A069 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4DAFBE731F3D750600CFBF57 /* SearchTableViewController.swift */,
+				4DAFBE641F3D5C8000CFBF57 /* CategoriesTableViewController.swift */,
+				4D1E09E61F3DFE8D008E25BE /* CompaniesTableViewController.swift */,
+				4DAFBE681F3D5C8D00CFBF57 /* CampusTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		99D739F41F3AD54900257F14 = {
 			isa = PBXGroup;
 			children = (
@@ -156,18 +187,11 @@
 				4DAFBE611F3D5BFF00CFBF57 /* CampusCash.entitlements */,
 				4DAFBE721F3D717D00CFBF57 /* PureLayout.h */,
 				99D73A001F3AD54900257F14 /* AppDelegate.swift */,
-				ED1FCFC81F3BE78C00F94A17 /* firstSegue.swift */,
-				4DAFBE621F3D5C2800CFBF57 /* secondSegue.swift */,
 				99D73A021F3AD54A00257F14 /* ViewController.swift */,
-				4DAFBE731F3D750600CFBF57 /* SearchTableViewController.swift */,
-				4DAFBE641F3D5C8000CFBF57 /* CategoriesTableViewController.swift */,
-				4D1E09EA1F3E0D6C008E25BE /* TableViewCell1.swift */,
-				4D1E09EB1F3E0D6C008E25BE /* TableViewCell1.xib */,
-				4D1E09F21F3E3061008E25BE /* TableViewCell2.swift */,
-				4D1E09F31F3E3061008E25BE /* TableViewCell2.xib */,
-				4D1E09E61F3DFE8D008E25BE /* CompaniesTableViewController.swift */,
 				4DAFBE661F3D5C8700CFBF57 /* TabViewController.swift */,
-				4DAFBE681F3D5C8D00CFBF57 /* CampusTableViewController.swift */,
+				4D8CD4DC1F3E44920036A069 /* Segue */,
+				4D8CD4DE1F3E44CE0036A069 /* Controllers */,
+				4D8CD4DD1F3E44A40036A069 /* View Cells */,
 				99D73A041F3AD54A00257F14 /* Main.storyboard */,
 				4DAFBE5F1F3D5B4800CFBF57 /* Launch Screen.storyboard */,
 				99D73A071F3AD54A00257F14 /* Assets.xcassets */,
