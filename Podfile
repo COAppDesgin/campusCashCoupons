@@ -8,7 +8,7 @@ target 'CampusCash' do
   # Pods for CampusCash
 	pod 'Firebase/Core'
     	pod 'Google/SignIn'
-	pod ‘PureLayout’	
+	pod 'PureLayout'	
 
   target 'CampusCashTests' do
     inherit! :search_paths
