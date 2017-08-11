@@ -8,7 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		4C021C16A387651D73943A1D /* Pods_CampusCashUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D8AF2996D30DAE68297242 /* Pods_CampusCashUITests.framework */; };
-		99C61F881F3BEEB90009E5E0 /* CampusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C61F871F3BEEB90009E5E0 /* CampusViewController.swift */; };
+		4DAFBE5E1F3D5AE700CFBF57 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DAFBE5D1F3D5AE700CFBF57 /* GoogleService-Info.plist */; };
+		4DAFBE601F3D5B4800CFBF57 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAFBE5F1F3D5B4800CFBF57 /* Launch Screen.storyboard */; };
+		4DAFBE631F3D5C2800CFBF57 /* secondSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAFBE621F3D5C2800CFBF57 /* secondSegue.swift */; };
+		4DAFBE651F3D5C8000CFBF57 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAFBE641F3D5C8000CFBF57 /* CategoriesTableViewController.swift */; };
+		4DAFBE671F3D5C8700CFBF57 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAFBE661F3D5C8700CFBF57 /* TabViewController.swift */; };
+		4DAFBE691F3D5C8D00CFBF57 /* CampusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAFBE681F3D5C8D00CFBF57 /* CampusTableViewController.swift */; };
 		99D73A011F3AD54900257F14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D73A001F3AD54900257F14 /* AppDelegate.swift */; };
 		99D73A031F3AD54A00257F14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D73A021F3AD54A00257F14 /* ViewController.swift */; };
 		99D73A061F3AD54A00257F14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D73A041F3AD54A00257F14 /* Main.storyboard */; };
@@ -38,9 +43,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		37210B3B6ED954717B1006CA /* Pods-CampusCash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusCash.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CampusCash/Pods-CampusCash.debug.xcconfig"; sourceTree = "<group>"; };
+		3A6A87D9BEDD7C364354A50E /* Pods-CampusCash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusCash.release.xcconfig"; path = "Pods/Target Support Files/Pods-CampusCash/Pods-CampusCash.release.xcconfig"; sourceTree = "<group>"; };
+		4DAFBE5D1F3D5AE700CFBF57 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4DAFBE5F1F3D5B4800CFBF57 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		4DAFBE611F3D5BFF00CFBF57 /* CampusCash.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CampusCash.entitlements; sourceTree = "<group>"; };
+		4DAFBE621F3D5C2800CFBF57 /* secondSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = secondSegue.swift; sourceTree = "<group>"; };
+		4DAFBE641F3D5C8000CFBF57 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
+		4DAFBE661F3D5C8700CFBF57 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		4DAFBE681F3D5C8D00CFBF57 /* CampusTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampusTableViewController.swift; sourceTree = "<group>"; };
 		55883FEE85958F1362E794A9 /* Pods_CampusCash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampusCash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9945C4392261CD6B031750E6 /* Pods-CampusCashUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusCashUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CampusCashUITests/Pods-CampusCashUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		99C61F871F3BEEB90009E5E0 /* CampusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampusViewController.swift; sourceTree = "<group>"; };
+		65426CF38248BBF66EA47D8A /* Pods-CampusCashUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusCashUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CampusCashUITests/Pods-CampusCashUITests.release.xcconfig"; sourceTree = "<group>"; };
 		99D739FD1F3AD54900257F14 /* CampusCash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampusCash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D73A001F3AD54900257F14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99D73A021F3AD54A00257F14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,13 +67,11 @@
 		99D73A201F3AD54A00257F14 /* CampusCashUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusCashUITests.swift; sourceTree = "<group>"; };
 		99D73A221F3AD54A00257F14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0D8AF2996D30DAE68297242 /* Pods_CampusCashUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampusCashUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACF72AC9B1D87C6629287BA8 /* Pods-CampusCashTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusCashTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CampusCashTests/Pods-CampusCashTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B18B2AC3A2D6CE1F7827C6A0 /* Pods_CampusCashTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampusCashTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2BBB0724A945DC4A4CA8350 /* Pods-CampusCashTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusCashTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CampusCashTests/Pods-CampusCashTests.release.xcconfig"; sourceTree = "<group>"; };
+		CF8AB45EFD321A63CE9C053C /* Pods-CampusCashUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusCashUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CampusCashUITests/Pods-CampusCashUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DE979B9A0095A1512CD00575 /* Pods-CampusCashTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusCashTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CampusCashTests/Pods-CampusCashTests.release.xcconfig"; sourceTree = "<group>"; };
+		E8E23D264CB67DD2DE4B647D /* Pods-CampusCashTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusCashTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CampusCashTests/Pods-CampusCashTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED1FCFC81F3BE78C00F94A17 /* firstSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = firstSegue.swift; sourceTree = "<group>"; };
-		F070D4F3D907804C77698B53 /* Pods-CampusCash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusCash.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CampusCash/Pods-CampusCash.debug.xcconfig"; sourceTree = "<group>"; };
-		F179CDC68D732840909A68D8 /* Pods-CampusCashUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusCashUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CampusCashUITests/Pods-CampusCashUITests.release.xcconfig"; sourceTree = "<group>"; };
-		F3E018E1B97EB1F35B151E7C /* Pods-CampusCash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusCash.release.xcconfig"; path = "Pods/Target Support Files/Pods-CampusCash/Pods-CampusCash.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,15 +102,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		42B8DF90BD6E3E4418EF962E /* Pods */ = {
+		3D00B80EECD0C9A7073FFEC1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F070D4F3D907804C77698B53 /* Pods-CampusCash.debug.xcconfig */,
-				F3E018E1B97EB1F35B151E7C /* Pods-CampusCash.release.xcconfig */,
-				ACF72AC9B1D87C6629287BA8 /* Pods-CampusCashTests.debug.xcconfig */,
-				D2BBB0724A945DC4A4CA8350 /* Pods-CampusCashTests.release.xcconfig */,
-				9945C4392261CD6B031750E6 /* Pods-CampusCashUITests.debug.xcconfig */,
-				F179CDC68D732840909A68D8 /* Pods-CampusCashUITests.release.xcconfig */,
+				37210B3B6ED954717B1006CA /* Pods-CampusCash.debug.xcconfig */,
+				3A6A87D9BEDD7C364354A50E /* Pods-CampusCash.release.xcconfig */,
+				E8E23D264CB67DD2DE4B647D /* Pods-CampusCashTests.debug.xcconfig */,
+				DE979B9A0095A1512CD00575 /* Pods-CampusCashTests.release.xcconfig */,
+				CF8AB45EFD321A63CE9C053C /* Pods-CampusCashUITests.debug.xcconfig */,
+				65426CF38248BBF66EA47D8A /* Pods-CampusCashUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -111,8 +122,8 @@
 				99D73A141F3AD54A00257F14 /* CampusCashTests */,
 				99D73A1F1F3AD54A00257F14 /* CampusCashUITests */,
 				99D739FE1F3AD54900257F14 /* Products */,
-				42B8DF90BD6E3E4418EF962E /* Pods */,
 				D2D731E007097951CEBB1B6D /* Frameworks */,
+				3D00B80EECD0C9A7073FFEC1 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,13 +140,19 @@
 		99D739FF1F3AD54900257F14 /* CampusCash */ = {
 			isa = PBXGroup;
 			children = (
+				4DAFBE611F3D5BFF00CFBF57 /* CampusCash.entitlements */,
 				99D73A001F3AD54900257F14 /* AppDelegate.swift */,
 				ED1FCFC81F3BE78C00F94A17 /* firstSegue.swift */,
+				4DAFBE621F3D5C2800CFBF57 /* secondSegue.swift */,
 				99D73A021F3AD54A00257F14 /* ViewController.swift */,
+				4DAFBE641F3D5C8000CFBF57 /* CategoriesTableViewController.swift */,
+				4DAFBE661F3D5C8700CFBF57 /* TabViewController.swift */,
+				4DAFBE681F3D5C8D00CFBF57 /* CampusTableViewController.swift */,
 				99D73A041F3AD54A00257F14 /* Main.storyboard */,
+				4DAFBE5F1F3D5B4800CFBF57 /* Launch Screen.storyboard */,
 				99D73A071F3AD54A00257F14 /* Assets.xcassets */,
 				99D73A0C1F3AD54A00257F14 /* Info.plist */,
-				99C61F871F3BEEB90009E5E0 /* CampusViewController.swift */,
+				4DAFBE5D1F3D5AE700CFBF57 /* GoogleService-Info.plist */,
 			);
 			path = CampusCash;
 			sourceTree = "<group>";
@@ -245,7 +262,7 @@
 				TargetAttributes = {
 					99D739FC1F3AD54900257F14 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 7VTWR2G39L;
+						DevelopmentTeam = 435YL82FQ2;
 						ProvisioningStyle = Automatic;
 					};
 					99D73A101F3AD54A00257F14 = {
@@ -289,6 +306,8 @@
 			files = (
 				99D73A081F3AD54A00257F14 /* Assets.xcassets in Resources */,
 				99D73A061F3AD54A00257F14 /* Main.storyboard in Resources */,
+				4DAFBE601F3D5B4800CFBF57 /* Launch Screen.storyboard in Resources */,
+				4DAFBE5E1F3D5AE700CFBF57 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,8 +485,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED1FCFC91F3BE78C00F94A17 /* firstSegue.swift in Sources */,
-				99C61F881F3BEEB90009E5E0 /* CampusViewController.swift in Sources */,
+				4DAFBE691F3D5C8D00CFBF57 /* CampusTableViewController.swift in Sources */,
 				99D73A031F3AD54A00257F14 /* ViewController.swift in Sources */,
+				4DAFBE651F3D5C8000CFBF57 /* CategoriesTableViewController.swift in Sources */,
+				4DAFBE631F3D5C2800CFBF57 /* secondSegue.swift in Sources */,
+				4DAFBE671F3D5C8700CFBF57 /* TabViewController.swift in Sources */,
 				99D73A011F3AD54900257F14 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -610,13 +632,13 @@
 		};
 		99D73A261F3AD54A00257F14 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F070D4F3D907804C77698B53 /* Pods-CampusCash.debug.xcconfig */;
+			baseConfigurationReference = 37210B3B6ED954717B1006CA /* Pods-CampusCash.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7VTWR2G39L;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				DEVELOPMENT_TEAM = 435YL82FQ2;
 				INFOPLIST_FILE = CampusCash/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.COAppDesign.CampusCash;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coappdesign.campuscashcoupons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -624,13 +646,13 @@
 		};
 		99D73A271F3AD54A00257F14 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3E018E1B97EB1F35B151E7C /* Pods-CampusCash.release.xcconfig */;
+			baseConfigurationReference = 3A6A87D9BEDD7C364354A50E /* Pods-CampusCash.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7VTWR2G39L;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				DEVELOPMENT_TEAM = 435YL82FQ2;
 				INFOPLIST_FILE = CampusCash/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.COAppDesign.CampusCash;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coappdesign.campuscashcoupons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -638,7 +660,7 @@
 		};
 		99D73A291F3AD54A00257F14 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACF72AC9B1D87C6629287BA8 /* Pods-CampusCashTests.debug.xcconfig */;
+			baseConfigurationReference = E8E23D264CB67DD2DE4B647D /* Pods-CampusCashTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -654,7 +676,7 @@
 		};
 		99D73A2A1F3AD54A00257F14 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2BBB0724A945DC4A4CA8350 /* Pods-CampusCashTests.release.xcconfig */;
+			baseConfigurationReference = DE979B9A0095A1512CD00575 /* Pods-CampusCashTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -670,7 +692,7 @@
 		};
 		99D73A2C1F3AD54A00257F14 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9945C4392261CD6B031750E6 /* Pods-CampusCashUITests.debug.xcconfig */;
+			baseConfigurationReference = CF8AB45EFD321A63CE9C053C /* Pods-CampusCashUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 7VTWR2G39L;
@@ -685,7 +707,7 @@
 		};
 		99D73A2D1F3AD54A00257F14 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F179CDC68D732840909A68D8 /* Pods-CampusCashUITests.release.xcconfig */;
+			baseConfigurationReference = 65426CF38248BBF66EA47D8A /* Pods-CampusCashUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 7VTWR2G39L;
