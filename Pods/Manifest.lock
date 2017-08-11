@@ -37,10 +37,12 @@ PODS:
   - GTMSessionFetcher/Core (1.1.11)
   - GTMSessionFetcher/Full (1.1.11):
     - GTMSessionFetcher/Core (= 1.1.11)
+  - PureLayout (3.0.2)
 
 DEPENDENCIES:
   - Firebase/Core
   - Google/SignIn
+  - PureLayout
 
 SPEC CHECKSUMS:
   Firebase: 4b66b5b59c43edac745b87f0c87e42cdd0279c13
@@ -52,7 +54,8 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
   GTMSessionFetcher: 5ad62e8200fa00ed011fe5e08d27fef72c5b1429
+  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
 
-PODFILE CHECKSUM: cbca9303d34c307317a4c231009b13d1ad9b6e24
+PODFILE CHECKSUM: f4ed069eebc7e7c16223c07c687cbe9e9ab549c5
 
 COCOAPODS: 1.2.1

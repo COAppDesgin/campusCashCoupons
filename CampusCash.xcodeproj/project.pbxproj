@@ -14,6 +14,7 @@
 		4DAFBE651F3D5C8000CFBF57 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAFBE641F3D5C8000CFBF57 /* CategoriesTableViewController.swift */; };
 		4DAFBE671F3D5C8700CFBF57 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAFBE661F3D5C8700CFBF57 /* TabViewController.swift */; };
 		4DAFBE691F3D5C8D00CFBF57 /* CampusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAFBE681F3D5C8D00CFBF57 /* CampusTableViewController.swift */; };
+		4DAFBE741F3D750600CFBF57 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAFBE731F3D750600CFBF57 /* SearchTableViewController.swift */; };
 		99D73A011F3AD54900257F14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D73A001F3AD54900257F14 /* AppDelegate.swift */; };
 		99D73A031F3AD54A00257F14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D73A021F3AD54A00257F14 /* ViewController.swift */; };
 		99D73A061F3AD54A00257F14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D73A041F3AD54A00257F14 /* Main.storyboard */; };
@@ -52,6 +53,8 @@
 		4DAFBE641F3D5C8000CFBF57 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
 		4DAFBE661F3D5C8700CFBF57 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		4DAFBE681F3D5C8D00CFBF57 /* CampusTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampusTableViewController.swift; sourceTree = "<group>"; };
+		4DAFBE721F3D717D00CFBF57 /* PureLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
+		4DAFBE731F3D750600CFBF57 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		55883FEE85958F1362E794A9 /* Pods_CampusCash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampusCash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65426CF38248BBF66EA47D8A /* Pods-CampusCashUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusCashUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CampusCashUITests/Pods-CampusCashUITests.release.xcconfig"; sourceTree = "<group>"; };
 		99D739FD1F3AD54900257F14 /* CampusCash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampusCash.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,10 +144,12 @@
 			isa = PBXGroup;
 			children = (
 				4DAFBE611F3D5BFF00CFBF57 /* CampusCash.entitlements */,
+				4DAFBE721F3D717D00CFBF57 /* PureLayout.h */,
 				99D73A001F3AD54900257F14 /* AppDelegate.swift */,
 				ED1FCFC81F3BE78C00F94A17 /* firstSegue.swift */,
 				4DAFBE621F3D5C2800CFBF57 /* secondSegue.swift */,
 				99D73A021F3AD54A00257F14 /* ViewController.swift */,
+				4DAFBE731F3D750600CFBF57 /* SearchTableViewController.swift */,
 				4DAFBE641F3D5C8000CFBF57 /* CategoriesTableViewController.swift */,
 				4DAFBE661F3D5C8700CFBF57 /* TabViewController.swift */,
 				4DAFBE681F3D5C8D00CFBF57 /* CampusTableViewController.swift */,
@@ -491,6 +496,7 @@
 				4DAFBE631F3D5C2800CFBF57 /* secondSegue.swift in Sources */,
 				4DAFBE671F3D5C8700CFBF57 /* TabViewController.swift in Sources */,
 				99D73A011F3AD54900257F14 /* AppDelegate.swift in Sources */,
+				4DAFBE741F3D750600CFBF57 /* SearchTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

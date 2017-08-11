@@ -52,9 +52,10 @@ class CategoriesTableViewController: UITableViewController {
 //        searchBar.backgroundImage = UIImage()
         searchBar.delegate = self as? UISearchBarDelegate
         navigationItem.titleView = searchBar
+
     }
-    
-    func searchBar(searchBar: UISearchBar, textDidChange textSearched: String) {
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange textSearched: String) {
     
     }
     
