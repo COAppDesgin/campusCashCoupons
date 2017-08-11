@@ -7,36 +7,26 @@
 //
 
 import UIKit
+import PureLayout
 
 class ViewController: UIViewController {
     
+    let searchController = SearchTableViewController()
+    
     @IBAction func unwindToVC1(segue:UIStoryboardSegue) { }
+    @IBAction func unwindToVC2(segue:UIStoryboardSegue) { }
+    
     var pageControl: UIPageControl!
     var scrollView: UIScrollView!
     var imageArray = [UIImage]()
+    var selectCity: UILabel!
     
-    private var searchBar: UISearchBar!
-    private var searchButton: UIButton!
-    private var resultsTable: UITableView!
-    private var searchBarTop = false
-    private var searchButtonWidthConstraint: NSLayoutConstraint?
-    private var searchButtonEdgeConstraint: NSLayoutConstraint?
-    
-    private let searchButtonHeight: CGFloat = 46
-    private let searchButtonWidth: CGFloat = 350
-    
-    private let searchBarStartingAlpha: CGFloat = 0
-    private let searchButtonStartingAlpha: CGFloat = 1
-    private let tableStartingAlpha: CGFloat = 0
-    private let searchBarEndingAlpha: CGFloat = 1
-    private let searchButtonEndingAlpha: CGFloat = 0
-    private let tableEndingAlpha: CGFloat = 1
-    
-    private let searchButtonStartingCornerRadius: CGFloat = 20
-    private let searchButtonEndingCornerRadius: CGFloat = 0
-    
-    private var didSetupConstraints = false
-    
+    var searchButton: UIButton!
+    let searchButtonStartingCornerRadius: CGFloat = 20
+    let searchButtonEndingCornerRadius: CGFloat = 0
+    let searchButtonEndingAlpha: CGFloat = 0
+    let searchButtonStartingAlpha: CGFloat = 1
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +35,7 @@ class ViewController: UIViewController {
         configurePageControl()
         setupBottomBar()
         setupSearchButton()
+        addSelectCityLabel()
     }
     
     override func didReceiveMemoryWarning() {
@@ -121,7 +112,7 @@ class ViewController: UIViewController {
     func setupImageView() {
         let imageTop = UIImage(named: "logoTopCU")
         let logoImageTop = UIImageView(image: imageTop)
-        logoImageTop.frame = CGRect(x: 2, y: 70, width: self.view.frame.width - 3, height: 398)
+        logoImageTop.frame = CGRect(x: 2, y: 25, width: self.view.frame.width - 3, height: 443)
         view.addSubview(logoImageTop)
         
         //        let imageBottom = UIImage(named: "logoBottomCSU")
@@ -134,7 +125,7 @@ class ViewController: UIViewController {
     func setupSearchButton() {
         searchButton = UIButton(type: .custom)
         searchButton.translatesAutoresizingMaskIntoConstraints = false
-        //        searchButton.addTarget(self, action: #selector(searchClicked), for: .touchUpInside)
+        searchButton.addTarget(self, action: #selector(searchClicked), for: .touchUpInside)
         searchButton.setTitle("Search..", for: .normal)
         searchButton.backgroundColor = UIColor.init(red: 72/255, green: 69/255, blue: 55/255, alpha: 1)
         searchButton.layer.cornerRadius = searchButtonStartingCornerRadius
@@ -147,8 +138,26 @@ class ViewController: UIViewController {
         searchButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
+    func searchClicked(sender: UIButton!) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "SearchTableViewController") as! UITableViewController
+        let navController = UINavigationController(rootViewController: vc)
+        self.present(navController, animated: true, completion: nil)
+    }
+    
     func searchBar(searchBar: UISearchBar, textDidChange textSearched: String) {
         
+    }
+
+    func addSelectCityLabel() {
+        let selectCity = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+        selectCity.text = "Select your city below:"
+        selectCity.center = CGPoint(x: self.view.frame.width/2, y: self.view.frame.height/2 + 125)
+        selectCity.textColor = UIColor.blue
+        selectCity.textAlignment = .center
+        
+        view.addSubview(selectCity)
+
     }
     
 }

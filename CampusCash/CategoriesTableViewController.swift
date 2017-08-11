@@ -8,9 +8,10 @@
 
 import UIKit
 
-class CategoriesTableViewController: UIViewController, UITableViewDelegate {
+class CategoriesTableViewController: UITableViewController {
 
     lazy var searchBar:UISearchBar = UISearchBar()
+    var cancelButton: UINavigationItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +32,10 @@ class CategoriesTableViewController: UIViewController, UITableViewDelegate {
 //        searchBar.backgroundImage = UIImage()
         searchBar.delegate = self as? UISearchBarDelegate
         navigationItem.titleView = searchBar
+
     }
-    
-    func searchBar(searchBar: UISearchBar, textDidChange textSearched: String) {
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange textSearched: String) {
     
     }
     
