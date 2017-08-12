@@ -9,7 +9,7 @@
 import UIKit
 import PureLayout
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIScrollViewDelegate {
     
     let searchController = SearchTableViewController()
     
@@ -26,8 +26,6 @@ class ViewController: UIViewController {
     let searchButtonEndingCornerRadius: CGFloat = 0
     let searchButtonEndingAlpha: CGFloat = 0
     let searchButtonStartingAlpha: CGFloat = 1
-    var scrollSnapWidth: CGFloat!
-    var lastOffset: CGFloat!
 
     
     override func viewDidLoad() {
@@ -57,11 +55,11 @@ class ViewController: UIViewController {
     func configurePageControl() {
         pageControl = UIPageControl(frame: CGRect(x: view.frame.width/2 - 100, y: view.frame.height/2 + 135, width: 200, height: 20))
         scrollView = UIScrollView(frame: CGRect(x: 0, y: self.view.frame.height/2 + 50, width: self.view.frame.width, height: self.view.frame.height/2))
-        //        scrollView.delegate = self as? UIScrollViewDelegate
+        scrollView.delegate = self
         scrollView.isUserInteractionEnabled = true
         view.addSubview(scrollView)
         
-        imageArray = [UIImage(named: "logoBottomCU")!, UIImage(named: "logoBottomCU")!, UIImage(named:"logoBottomCSU")!]
+        imageArray = [UIImage(named: "cityCampusBottom")!, UIImage(named: "logoBottomCU")!, UIImage(named:"logoBottomCSU")!]
         
         for i in 0..<imageArray.count {
             
@@ -72,6 +70,7 @@ class ViewController: UIViewController {
             imageView.frame = CGRect(x: xPosition, y: 55, width: self.scrollView.frame.width, height: self.scrollView.frame.height - 100)
             
             scrollView.contentSize.width = scrollView.frame.width * CGFloat(i + 1)
+            scrollView.isPagingEnabled = true
             scrollView.addSubview(imageView)
         }
         
@@ -84,24 +83,9 @@ class ViewController: UIViewController {
         
     }
     
-    func setContentOffset(scrollView: UIScrollView) {
-        
-        let scrollSnapWidth = CGFloat(view.frame.width)
-        let stopOver = scrollSnapWidth
-        var lastOffset = round(scrollView.contentOffset.x / stopOver) * stopOver
-        lastOffset = max(0, min(lastOffset, scrollView.contentSize.width - scrollView.frame.width))
-        
-        scrollView.setContentOffset(CGPoint(x: scrollView.contentOffset.x, y: lastOffset), animated: true)
-        
-        scrollView.isScrollEnabled = true
-        setContentOffset(scrollView: scrollView)
-    }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let scrollView = UIScrollView(frame: CGRect(x:0, y:0, width:320, height: 300))
-        let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
-        
-        pageControl.currentPage = Int(pageNumber)
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let pageIndex = round(scrollView.contentOffset.x/view.frame.width)
+        pageControl.currentPage = Int(pageIndex)
     }
     
     func setupBottomBar() {
@@ -186,31 +170,3 @@ class ViewController: UIViewController {
     }
     
 }
-
-extension ViewController: UIScrollViewDelegate {
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-        if scrollView.contentOffset.y > lastOffset + scrollSnapWidth{
-            scrollView.isScrollEnabled = false
-        } else if scrollView.contentOffset.y < lastOffset - scrollSnapWidth {
-            scrollView.isScrollEnabled = false
-        }
-    }
-    
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        
-        guard !decelerate else {
-            return
-        }
-        
-        setContentOffset(scrollView: scrollView)
-    }
-    
-    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
-        
-        setContentOffset(scrollView: scrollView)
-    }
-}
-
-
