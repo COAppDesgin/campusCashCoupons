@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4C021C16A387651D73943A1D /* Pods_CampusCashUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D8AF2996D30DAE68297242 /* Pods_CampusCashUITests.framework */; };
+		4D18FC461F4232CF00173CE1 /* CouponTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18FC451F4232CF00173CE1 /* CouponTableViewController.swift */; };
+		4D18FC4D1F4234B700173CE1 /* TableViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18FC4B1F4234B700173CE1 /* TableViewCell3.swift */; };
+		4D18FC4E1F4234B700173CE1 /* TableViewCell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D18FC4C1F4234B700173CE1 /* TableViewCell3.xib */; };
 		4D1E09E71F3DFE8D008E25BE /* CompaniesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E09E61F3DFE8D008E25BE /* CompaniesTableViewController.swift */; };
 		4D1E09EC1F3E0D6C008E25BE /* TableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E09EA1F3E0D6C008E25BE /* TableViewCell1.swift */; };
 		4D1E09ED1F3E0D6C008E25BE /* TableViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D1E09EB1F3E0D6C008E25BE /* TableViewCell1.xib */; };
@@ -51,6 +54,9 @@
 /* Begin PBXFileReference section */
 		37210B3B6ED954717B1006CA /* Pods-CampusCash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusCash.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CampusCash/Pods-CampusCash.debug.xcconfig"; sourceTree = "<group>"; };
 		3A6A87D9BEDD7C364354A50E /* Pods-CampusCash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusCash.release.xcconfig"; path = "Pods/Target Support Files/Pods-CampusCash/Pods-CampusCash.release.xcconfig"; sourceTree = "<group>"; };
+		4D18FC451F4232CF00173CE1 /* CouponTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponTableViewController.swift; sourceTree = "<group>"; };
+		4D18FC4B1F4234B700173CE1 /* TableViewCell3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell3.swift; sourceTree = "<group>"; };
+		4D18FC4C1F4234B700173CE1 /* TableViewCell3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell3.xib; sourceTree = "<group>"; };
 		4D1E09E61F3DFE8D008E25BE /* CompaniesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompaniesTableViewController.swift; sourceTree = "<group>"; };
 		4D1E09EA1F3E0D6C008E25BE /* TableViewCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell1.swift; sourceTree = "<group>"; };
 		4D1E09EB1F3E0D6C008E25BE /* TableViewCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell1.xib; sourceTree = "<group>"; };
@@ -144,6 +150,8 @@
 				4D1E09EB1F3E0D6C008E25BE /* TableViewCell1.xib */,
 				4D1E09F21F3E3061008E25BE /* TableViewCell2.swift */,
 				4D1E09F31F3E3061008E25BE /* TableViewCell2.xib */,
+				4D18FC4B1F4234B700173CE1 /* TableViewCell3.swift */,
+				4D18FC4C1F4234B700173CE1 /* TableViewCell3.xib */,
 			);
 			name = "View Cells";
 			sourceTree = "<group>";
@@ -153,6 +161,7 @@
 			children = (
 				4DAFBE731F3D750600CFBF57 /* SearchTableViewController.swift */,
 				4DAFBE641F3D5C8000CFBF57 /* CategoriesTableViewController.swift */,
+				4D18FC451F4232CF00173CE1 /* CouponTableViewController.swift */,
 				4D1E09E61F3DFE8D008E25BE /* CompaniesTableViewController.swift */,
 				4DAFBE681F3D5C8D00CFBF57 /* CampusTableViewController.swift */,
 			);
@@ -354,6 +363,7 @@
 				4DAFBE601F3D5B4800CFBF57 /* Launch Screen.storyboard in Resources */,
 				4D1E09F51F3E3061008E25BE /* TableViewCell2.xib in Resources */,
 				4DAFBE5E1F3D5AE700CFBF57 /* GoogleService-Info.plist in Resources */,
+				4D18FC4E1F4234B700173CE1 /* TableViewCell3.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,6 +541,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED1FCFC91F3BE78C00F94A17 /* firstSegue.swift in Sources */,
+				4D18FC4D1F4234B700173CE1 /* TableViewCell3.swift in Sources */,
 				4DAFBE691F3D5C8D00CFBF57 /* CampusTableViewController.swift in Sources */,
 				99D73A031F3AD54A00257F14 /* ViewController.swift in Sources */,
 				4DAFBE651F3D5C8000CFBF57 /* CategoriesTableViewController.swift in Sources */,
@@ -539,6 +550,7 @@
 				4DAFBE671F3D5C8700CFBF57 /* TabViewController.swift in Sources */,
 				99D73A011F3AD54900257F14 /* AppDelegate.swift in Sources */,
 				4DAFBE741F3D750600CFBF57 /* SearchTableViewController.swift in Sources */,
+				4D18FC461F4232CF00173CE1 /* CouponTableViewController.swift in Sources */,
 				4D1E09F41F3E3061008E25BE /* TableViewCell2.swift in Sources */,
 				4D1E09E71F3DFE8D008E25BE /* CompaniesTableViewController.swift in Sources */,
 			);

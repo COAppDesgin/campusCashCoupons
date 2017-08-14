@@ -19,14 +19,23 @@ struct cellData {
     
 }
 
+var selectCompanyText: String!
+var selectAddressText: String!
+var selectPhoneNumberText: String!
+var selectWebsiteText: String!
+var selectCouponImage: UIImage!
+
 class CompaniesTableViewController: UITableViewController {
     
     var arrayOfCellData = [cellData]()
+    var index: Int! = 0
+    var tabController: TabViewController?
     
     override func viewDidLoad() {
         arrayOfCellData = [cellData(cell: 1, companyText: "Cosmos", addressText: "659 30th St, Boulder", phoneNumberText: "303-447-1133", websiteText: "cosmospizza.com", couponImage: #imageLiteral(resourceName: "Cosmos")),
                             cellData(cell: 1, companyText: "Half Fast Subs", addressText: "1215 13th Street", phoneNumberText: "303-449-0404", websiteText: "halffastsubs.com", couponImage: #imageLiteral(resourceName: "Half Fast Subs")),
                             cellData(cell: 1, companyText: "The Corner", addressText: "2115 13th Street, corner of 13th & College", phoneNumberText: "720-398-8331", websiteText: "thecornerboulder.com", couponImage: #imageLiteral(resourceName: "The Corner"))]
+        
         
         self.navigationController?.navigationBar.isHidden = false
     }
@@ -66,5 +75,24 @@ class CompaniesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 102
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        index = indexPath.row
+        print(index)
+        
+        selectCompanyText = arrayOfCellData[index].companyText
+        selectAddressText  = arrayOfCellData[index].addressText
+        selectPhoneNumberText  = arrayOfCellData[index].phoneNumberText
+        selectWebsiteText = arrayOfCellData[index].websiteText
+        selectCouponImage = arrayOfCellData[index].couponImage
+        
+        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CouponTableViewController") as? CouponTableViewController {
+            if let navigator = navigationController {
+                navigator.pushViewController(viewController, animated: true)
+            }
+        }
+    }
+    
+    
     
     }

@@ -9,7 +9,7 @@
 import UIKit
 import PureLayout
 
-class ViewController: UIViewController, UIScrollViewDelegate {
+class ViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognizerDelegate {
     
     let searchController = SearchTableViewController()
     
@@ -98,8 +98,11 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         bottomBarImage.adjustsImageWhenHighlighted = false
         bottomBarImage.alpha = 0.9
         //bottomBarImage.addTarget(self, action: #selector(sendBottomBar), for: .touchDragInside)
+        let touchGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(sendBottomBar))
         let swipeGestureRecognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer.init(target: self, action: #selector(sendBottomBar))
         swipeGestureRecognizer.direction = UISwipeGestureRecognizerDirection.up
+        
+        bottomBarImage.addGestureRecognizer(touchGestureRecognizer)
         self.view.addGestureRecognizer(swipeGestureRecognizer)
         
         //bottomBarImage.frame = CGRect(x: 0 y: 0, width: 100, height: 200)
