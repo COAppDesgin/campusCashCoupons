@@ -22,8 +22,37 @@ class CouponTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let width = selectCouponImage.size.width
+        let height = selectCouponImage.size.height + 50
+        
+        if width > height {
+            selectCouponImage = imageRotatedByDegrees(oldImage: selectCouponImage, deg: 90)
+        } else {
+            selectCouponImage = imageRotatedByDegrees(oldImage: selectCouponImage, deg: 0)
+        }
         
          arrayOfCellData = [cellData(cell: 3, companyText: selectCompanyText, addressText: selectAddressText, phoneNumberText: selectPhoneNumberText, websiteText: selectWebsiteText, couponImage: selectCouponImage)]
+    }
+    
+    func imageRotatedByDegrees(oldImage: UIImage, deg degrees: CGFloat) -> UIImage {
+        //Calculate the size of the rotated view's containing box for our drawing space
+        let rotatedViewBox: UIView = UIView(frame: CGRect(x: 0, y: 0, width: oldImage.size.width, height: oldImage.size.height))
+        let t: CGAffineTransform = CGAffineTransform(rotationAngle: degrees * CGFloat.pi / 180)
+        rotatedViewBox.transform = t
+        let rotatedSize: CGSize = rotatedViewBox.frame.size
+        //Create the bitmap context
+        UIGraphicsBeginImageContext(rotatedSize)
+        let bitmap: CGContext = UIGraphicsGetCurrentContext()!
+        //Move the origin to the middle of the image so we will rotate and scale around the center.
+        bitmap.translateBy(x: rotatedSize.width / 2, y: rotatedSize.height / 2)
+        //Rotate the image context
+        bitmap.rotate(by: (degrees * CGFloat.pi / 180))
+        //Now, draw the rotated/scaled image into the context
+        bitmap.scaleBy(x: 1.0, y: -1.0)
+        bitmap.draw(oldImage.cgImage!, in: CGRect(x: -oldImage.size.width / 2, y: -oldImage.size.height / 2, width: oldImage.size.width, height: oldImage.size.height))
+        let newImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return newImage
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,6 +69,10 @@ class CouponTableViewController: UITableViewController {
             cell.addressLabel.text = arrayOfCellData[indexPath.row].addressText
             cell.phoneNumberLabel.text = arrayOfCellData[indexPath.row].phoneNumberText
             cell.websiteLabel.text = arrayOfCellData[indexPath.row].websiteText
+            
+            let tap = UITapGestureRecognizer(target: self, action: #selector(self.onClicLabel(sender:)))
+            cell.websiteLabel.isUserInteractionEnabled = true
+            cell.websiteLabel.addGestureRecognizer(tap)
             
             return cell
             
@@ -60,6 +93,22 @@ class CouponTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 700
+    }
+    
+    func onClicLabel(sender:UITapGestureRecognizer) {
+        let string = "http://www."
+        let url =  string + selectWebsiteText
+        openUrl(urlString: url)
+    }
+    
+    
+    func openUrl(urlString:String!) {
+        let url = URL(string: urlString)!
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
     }
 
 }

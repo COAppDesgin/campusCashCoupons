@@ -11,6 +11,7 @@
 		4D18FC461F4232CF00173CE1 /* CouponTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18FC451F4232CF00173CE1 /* CouponTableViewController.swift */; };
 		4D18FC4D1F4234B700173CE1 /* TableViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18FC4B1F4234B700173CE1 /* TableViewCell3.swift */; };
 		4D18FC4E1F4234B700173CE1 /* TableViewCell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D18FC4C1F4234B700173CE1 /* TableViewCell3.xib */; };
+		4D18FC521F426E7200173CE1 /* Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18FC511F426E7200173CE1 /* Rotate.swift */; };
 		4D1E09E71F3DFE8D008E25BE /* CompaniesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E09E61F3DFE8D008E25BE /* CompaniesTableViewController.swift */; };
 		4D1E09EC1F3E0D6C008E25BE /* TableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E09EA1F3E0D6C008E25BE /* TableViewCell1.swift */; };
 		4D1E09ED1F3E0D6C008E25BE /* TableViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D1E09EB1F3E0D6C008E25BE /* TableViewCell1.xib */; };
@@ -57,6 +58,7 @@
 		4D18FC451F4232CF00173CE1 /* CouponTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponTableViewController.swift; sourceTree = "<group>"; };
 		4D18FC4B1F4234B700173CE1 /* TableViewCell3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell3.swift; sourceTree = "<group>"; };
 		4D18FC4C1F4234B700173CE1 /* TableViewCell3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell3.xib; sourceTree = "<group>"; };
+		4D18FC511F426E7200173CE1 /* Rotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rotate.swift; sourceTree = "<group>"; };
 		4D1E09E61F3DFE8D008E25BE /* CompaniesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompaniesTableViewController.swift; sourceTree = "<group>"; };
 		4D1E09EA1F3E0D6C008E25BE /* TableViewCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell1.swift; sourceTree = "<group>"; };
 		4D1E09EB1F3E0D6C008E25BE /* TableViewCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell1.xib; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			children = (
 				4DAFBE611F3D5BFF00CFBF57 /* CampusCash.entitlements */,
 				4DAFBE721F3D717D00CFBF57 /* PureLayout.h */,
+				4D18FC511F426E7200173CE1 /* Rotate.swift */,
 				99D73A001F3AD54900257F14 /* AppDelegate.swift */,
 				99D73A021F3AD54A00257F14 /* ViewController.swift */,
 				4DAFBE661F3D5C8700CFBF57 /* TabViewController.swift */,
@@ -548,6 +551,7 @@
 				4DAFBE631F3D5C2800CFBF57 /* secondSegue.swift in Sources */,
 				4D1E09EC1F3E0D6C008E25BE /* TableViewCell1.swift in Sources */,
 				4DAFBE671F3D5C8700CFBF57 /* TabViewController.swift in Sources */,
+				4D18FC521F426E7200173CE1 /* Rotate.swift in Sources */,
 				99D73A011F3AD54900257F14 /* AppDelegate.swift in Sources */,
 				4DAFBE741F3D750600CFBF57 /* SearchTableViewController.swift in Sources */,
 				4D18FC461F4232CF00173CE1 /* CouponTableViewController.swift in Sources */,

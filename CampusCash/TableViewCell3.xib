@@ -19,8 +19,17 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="699.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="border" translatesAutoresizingMaskIntoConstraints="NO" id="1kf-Cx-QWb">
+                        <rect key="frame" x="8" y="0.0" width="398" height="114"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="114" id="ocY-IK-fVQ"/>
+                        </constraints>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DP-RI-7AS">
                         <rect key="frame" x="8" y="8" width="398" height="29"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" staticText="YES" header="YES"/>
+                        </accessibility>
                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -33,37 +42,46 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEn-g9-JM9">
                         <rect key="frame" x="8" y="65" width="398" height="21"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" link="YES" staticText="YES"/>
+                        </accessibility>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPO-Da-Cjr">
-                        <rect key="frame" x="8" y="86" width="398" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="8" y="89" width="398" height="21"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" link="YES" staticText="YES"/>
+                        </accessibility>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rF9-4t-F7M">
-                        <rect key="frame" x="8" y="115" width="398" height="577"/>
+                        <rect key="frame" x="8" y="122" width="398" height="577"/>
                     </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="topMargin" secondItem="0DP-RI-7AS" secondAttribute="top" id="2Zd-tj-Qwd"/>
                     <constraint firstAttribute="leadingMargin" secondItem="gPO-Da-Cjr" secondAttribute="leading" id="3Sb-PM-hXS"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="rF9-4t-F7M" secondAttribute="bottom" constant="-0.5" id="84I-zc-FDb"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="rF9-4t-F7M" secondAttribute="bottom" constant="-7.5" id="84I-zc-FDb"/>
                     <constraint firstAttribute="leadingMargin" secondItem="rF9-4t-F7M" secondAttribute="leading" id="9tx-Sc-nkS"/>
-                    <constraint firstItem="rF9-4t-F7M" firstAttribute="top" secondItem="ETz-9w-6e6" secondAttribute="topMargin" constant="107" id="GjV-qO-alZ"/>
-                    <constraint firstItem="gPO-Da-Cjr" firstAttribute="top" secondItem="ETz-9w-6e6" secondAttribute="topMargin" constant="78" id="LF5-hn-7M6"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="1kf-Cx-QWb" secondAttribute="leading" id="GUu-fa-mAC"/>
+                    <constraint firstItem="rF9-4t-F7M" firstAttribute="top" secondItem="ETz-9w-6e6" secondAttribute="topMargin" constant="114" id="GjV-qO-alZ"/>
+                    <constraint firstItem="gPO-Da-Cjr" firstAttribute="top" secondItem="ETz-9w-6e6" secondAttribute="topMargin" constant="81" id="LF5-hn-7M6"/>
                     <constraint firstAttribute="leadingMargin" secondItem="cEn-g9-JM9" secondAttribute="leading" id="MbR-FJ-bqW"/>
                     <constraint firstItem="cEn-g9-JM9" firstAttribute="top" secondItem="ETz-9w-6e6" secondAttribute="topMargin" constant="57" id="RRN-VT-BqC"/>
                     <constraint firstAttribute="leadingMargin" secondItem="0DP-RI-7AS" secondAttribute="leading" id="RzZ-h0-vIR"/>
                     <constraint firstAttribute="trailingMargin" secondItem="rF9-4t-F7M" secondAttribute="trailing" id="Uer-mK-cgf"/>
                     <constraint firstItem="B6I-aO-S5R" firstAttribute="top" secondItem="ETz-9w-6e6" secondAttribute="topMargin" constant="36" id="ehp-iR-qlC"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="1kf-Cx-QWb" secondAttribute="trailing" id="iEK-3I-QEM"/>
                     <constraint firstAttribute="trailingMargin" secondItem="cEn-g9-JM9" secondAttribute="trailing" id="j5p-FE-b2A"/>
                     <constraint firstAttribute="leadingMargin" secondItem="B6I-aO-S5R" secondAttribute="leading" id="m94-sW-fyW"/>
                     <constraint firstAttribute="trailingMargin" secondItem="gPO-Da-Cjr" secondAttribute="trailing" id="oJW-TR-Zq6"/>
                     <constraint firstAttribute="trailingMargin" secondItem="0DP-RI-7AS" secondAttribute="trailing" id="ozs-nc-q2f"/>
                     <constraint firstAttribute="trailingMargin" secondItem="B6I-aO-S5R" secondAttribute="trailing" id="r6M-a2-JTR"/>
+                    <constraint firstItem="1kf-Cx-QWb" firstAttribute="top" secondItem="ETz-9w-6e6" secondAttribute="topMargin" constant="-8" id="rIl-NB-8Kp"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -76,4 +94,7 @@
             <point key="canvasLocation" x="507" y="-571"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="border" width="574" height="200"/>
+    </resources>
 </document>

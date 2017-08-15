@@ -17,5 +17,4 @@ class TableViewCell3: UITableViewCell {
 
     @IBOutlet weak var mainImageView: UIImageView!
     
-    
 }

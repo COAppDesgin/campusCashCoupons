@@ -38,6 +38,7 @@ class CompaniesTableViewController: UITableViewController {
         
         
         self.navigationController?.navigationBar.isHidden = false
+        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -78,7 +79,6 @@ class CompaniesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         index = indexPath.row
-        print(index)
         
         selectCompanyText = arrayOfCellData[index].companyText
         selectAddressText  = arrayOfCellData[index].addressText
