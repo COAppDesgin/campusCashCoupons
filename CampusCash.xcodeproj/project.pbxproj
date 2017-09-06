@@ -17,6 +17,8 @@
 		4D1E09ED1F3E0D6C008E25BE /* TableViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D1E09EB1F3E0D6C008E25BE /* TableViewCell1.xib */; };
 		4D1E09F41F3E3061008E25BE /* TableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E09F21F3E3061008E25BE /* TableViewCell2.swift */; };
 		4D1E09F51F3E3061008E25BE /* TableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D1E09F31F3E3061008E25BE /* TableViewCell2.xib */; };
+		4D7820621F605588005C2EDF /* Coupon2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7820611F605588005C2EDF /* Coupon2TableViewController.swift */; };
+		4D7820641F606762005C2EDF /* CAGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7820631F606762005C2EDF /* CAGradientLayer.swift */; };
 		4DAFBE5E1F3D5AE700CFBF57 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DAFBE5D1F3D5AE700CFBF57 /* GoogleService-Info.plist */; };
 		4DAFBE601F3D5B4800CFBF57 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAFBE5F1F3D5B4800CFBF57 /* Launch Screen.storyboard */; };
 		4DAFBE631F3D5C2800CFBF57 /* secondSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAFBE621F3D5C2800CFBF57 /* secondSegue.swift */; };
@@ -64,6 +66,8 @@
 		4D1E09EB1F3E0D6C008E25BE /* TableViewCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell1.xib; sourceTree = "<group>"; };
 		4D1E09F21F3E3061008E25BE /* TableViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell2.swift; sourceTree = "<group>"; };
 		4D1E09F31F3E3061008E25BE /* TableViewCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell2.xib; sourceTree = "<group>"; };
+		4D7820611F605588005C2EDF /* Coupon2TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coupon2TableViewController.swift; sourceTree = "<group>"; };
+		4D7820631F606762005C2EDF /* CAGradientLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAGradientLayer.swift; sourceTree = "<group>"; };
 		4DAFBE5D1F3D5AE700CFBF57 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4DAFBE5F1F3D5B4800CFBF57 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		4DAFBE611F3D5BFF00CFBF57 /* CampusCash.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CampusCash.entitlements; sourceTree = "<group>"; };
@@ -139,6 +143,8 @@
 		4D8CD4DC1F3E44920036A069 /* Segue */ = {
 			isa = PBXGroup;
 			children = (
+				4D18FC511F426E7200173CE1 /* Rotate.swift */,
+				4D7820631F606762005C2EDF /* CAGradientLayer.swift */,
 				ED1FCFC81F3BE78C00F94A17 /* firstSegue.swift */,
 				4DAFBE621F3D5C2800CFBF57 /* secondSegue.swift */,
 			);
@@ -164,6 +170,7 @@
 				4DAFBE731F3D750600CFBF57 /* SearchTableViewController.swift */,
 				4DAFBE641F3D5C8000CFBF57 /* CategoriesTableViewController.swift */,
 				4D18FC451F4232CF00173CE1 /* CouponTableViewController.swift */,
+				4D7820611F605588005C2EDF /* Coupon2TableViewController.swift */,
 				4D1E09E61F3DFE8D008E25BE /* CompaniesTableViewController.swift */,
 				4DAFBE681F3D5C8D00CFBF57 /* CampusTableViewController.swift */,
 			);
@@ -197,7 +204,6 @@
 			children = (
 				4DAFBE611F3D5BFF00CFBF57 /* CampusCash.entitlements */,
 				4DAFBE721F3D717D00CFBF57 /* PureLayout.h */,
-				4D18FC511F426E7200173CE1 /* Rotate.swift */,
 				99D73A001F3AD54900257F14 /* AppDelegate.swift */,
 				99D73A021F3AD54A00257F14 /* ViewController.swift */,
 				4DAFBE661F3D5C8700CFBF57 /* TabViewController.swift */,
@@ -553,10 +559,12 @@
 				4DAFBE671F3D5C8700CFBF57 /* TabViewController.swift in Sources */,
 				4D18FC521F426E7200173CE1 /* Rotate.swift in Sources */,
 				99D73A011F3AD54900257F14 /* AppDelegate.swift in Sources */,
+				4D7820621F605588005C2EDF /* Coupon2TableViewController.swift in Sources */,
 				4DAFBE741F3D750600CFBF57 /* SearchTableViewController.swift in Sources */,
 				4D18FC461F4232CF00173CE1 /* CouponTableViewController.swift in Sources */,
 				4D1E09F41F3E3061008E25BE /* TableViewCell2.swift in Sources */,
 				4D1E09E71F3DFE8D008E25BE /* CompaniesTableViewController.swift in Sources */,
+				4D7820641F606762005C2EDF /* CAGradientLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

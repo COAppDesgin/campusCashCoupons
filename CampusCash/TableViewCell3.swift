@@ -10,7 +10,6 @@ import UIKit
 
 class TableViewCell3: UITableViewCell {
 
-    @IBOutlet weak var companyLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var phoneNumberLabel: UILabel!
     @IBOutlet weak var websiteLabel: UILabel!

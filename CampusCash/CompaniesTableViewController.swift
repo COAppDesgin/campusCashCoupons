@@ -16,6 +16,8 @@ struct cellData {
     let phoneNumberText: String!
     let websiteText: String!
     let couponImage: UIImage!
+    let companyImage: UIImage!
+    let companyColor: String!
     
 }
 
@@ -24,6 +26,8 @@ var selectAddressText: String!
 var selectPhoneNumberText: String!
 var selectWebsiteText: String!
 var selectCouponImage: UIImage!
+var selectCompanyImage: UIImage!
+var selectCompanyColor: String!
 
 class CompaniesTableViewController: UITableViewController {
     
@@ -32,9 +36,9 @@ class CompaniesTableViewController: UITableViewController {
     var tabController: TabViewController?
     
     override func viewDidLoad() {
-        arrayOfCellData = [cellData(cell: 1, companyText: "Cosmos", addressText: "659 30th St, Boulder", phoneNumberText: "303-447-1133", websiteText: "cosmospizza.com", couponImage: #imageLiteral(resourceName: "Cosmos")),
-                            cellData(cell: 1, companyText: "Half Fast Subs", addressText: "1215 13th Street", phoneNumberText: "303-449-0404", websiteText: "halffastsubs.com", couponImage: #imageLiteral(resourceName: "Half Fast Subs")),
-                            cellData(cell: 1, companyText: "The Corner", addressText: "2115 13th Street, corner of 13th & College", phoneNumberText: "720-398-8331", websiteText: "thecornerboulder.com", couponImage: #imageLiteral(resourceName: "The Corner"))]
+        arrayOfCellData = [cellData(cell: 1, companyText: "Cosmos", addressText: "659 30th St, Boulder", phoneNumberText: "303-447-1133", websiteText: "cosmospizza.com", couponImage: #imageLiteral(resourceName: "Cosmos"), companyImage: #imageLiteral(resourceName: "Cosmos Pizza"), companyColor: "blue"),
+                            cellData(cell: 1, companyText: "Half Fast Subs", addressText: "1215 13th Street", phoneNumberText: "303-449-0404", websiteText: "halffastsubs.com", couponImage: #imageLiteral(resourceName: "Half Fast Subs"), companyImage: #imageLiteral(resourceName: "Half Fast Subs-1"), companyColor: "red"),
+                            cellData(cell: 1, companyText: "The Corner", addressText: "2115 13th Street, corner of 13th & College", phoneNumberText: "720-398-8331", websiteText: "thecornerboulder.com", couponImage: #imageLiteral(resourceName: "The Corner"), companyImage: #imageLiteral(resourceName: "The Corner-1"), companyColor: "grey")]
         
         
         self.navigationController?.navigationBar.isHidden = false
@@ -85,8 +89,10 @@ class CompaniesTableViewController: UITableViewController {
         selectPhoneNumberText  = arrayOfCellData[index].phoneNumberText
         selectWebsiteText = arrayOfCellData[index].websiteText
         selectCouponImage = arrayOfCellData[index].couponImage
+        selectCompanyImage = arrayOfCellData[index].companyImage
+        selectCompanyColor = arrayOfCellData[index].companyColor
         
-        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CouponTableViewController") as? CouponTableViewController {
+        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Coupon2TableViewController") as? Coupon2TableViewController {
             if let navigator = navigationController {
                 navigator.pushViewController(viewController, animated: true)
             }

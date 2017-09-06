@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iaj-Gr-ag5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iaj-Gr-ag5">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -208,10 +208,10 @@
             </objects>
             <point key="canvasLocation" x="250" y="1092"/>
         </scene>
-        <!--Coupon Table View Controller-->
+        <!--Coupon2 Table View Controller-->
         <scene sceneID="Xpt-5O-hWI">
             <objects>
-                <tableViewController storyboardIdentifier="CouponTableViewController" id="E1h-ec-jfz" customClass="CouponTableViewController" customModule="CampusCash" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Coupon2TableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="E1h-ec-jfz" customClass="Coupon2TableViewController" customModule="CampusCash" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nwC-xI-Uo4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

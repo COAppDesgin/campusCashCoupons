@@ -75,7 +75,6 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognize
         }
         
         pageControl.numberOfPages = imageArray.count
-        pageControl.currentPage = 0
         pageControl.tintColor = UIColor.red
         pageControl.pageIndicatorTintColor = UIColor.black
         pageControl.currentPageIndicatorTintColor = UIColor.green
@@ -85,7 +84,13 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognize
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let pageIndex = round(scrollView.contentOffset.x/view.frame.width)
-        pageControl.currentPage = Int(pageIndex)
+        let defaults = UserDefaults.standard
+        defaults.set(pageIndex, forKey: "pageIndex")
+        defaults.synchronize()
+        
+        print(pageIndex)
+        
+        pageControl.currentPage = defaults.integer(forKey: "pageIndex")
     }
     
     func setupBottomBar() {

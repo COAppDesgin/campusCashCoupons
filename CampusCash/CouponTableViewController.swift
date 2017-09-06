@@ -31,7 +31,7 @@ class CouponTableViewController: UITableViewController {
             selectCouponImage = imageRotatedByDegrees(oldImage: selectCouponImage, deg: 0)
         }
         
-         arrayOfCellData = [cellData(cell: 3, companyText: selectCompanyText, addressText: selectAddressText, phoneNumberText: selectPhoneNumberText, websiteText: selectWebsiteText, couponImage: selectCouponImage)]
+         arrayOfCellData = [cellData(cell: 3, companyText: selectCompanyText, addressText: selectAddressText, phoneNumberText: selectPhoneNumberText, websiteText: selectWebsiteText, couponImage: selectCouponImage, companyImage: selectCompanyImage, companyColor: selectCompanyColor)]
     }
     
     func imageRotatedByDegrees(oldImage: UIImage, deg degrees: CGFloat) -> UIImage {
@@ -59,37 +59,37 @@ class CouponTableViewController: UITableViewController {
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if arrayOfCellData[indexPath.row].cell == 3 {
-            
-            let cell = Bundle.main.loadNibNamed("TableViewCell3", owner: self, options: nil)?.first as! TableViewCell3
-            
-            cell.mainImageView.image = arrayOfCellData[indexPath.row].couponImage
-            cell.companyLabel.text = arrayOfCellData[indexPath.row].companyText
-            cell.addressLabel.text = arrayOfCellData[indexPath.row].addressText
-            cell.phoneNumberLabel.text = arrayOfCellData[indexPath.row].phoneNumberText
-            cell.websiteLabel.text = arrayOfCellData[indexPath.row].websiteText
-            
-            let tap = UITapGestureRecognizer(target: self, action: #selector(self.onClicLabel(sender:)))
-            cell.websiteLabel.isUserInteractionEnabled = true
-            cell.websiteLabel.addGestureRecognizer(tap)
-            
-            return cell
-            
-        } else {
-            
-            let cell = Bundle.main.loadNibNamed("TableViewCell3", owner: self, options: nil)?.first as! TableViewCell3
-            
-            cell.mainImageView.image = arrayOfCellData[indexPath.row].couponImage
-            cell.companyLabel.text = arrayOfCellData[indexPath.row].companyText
-            cell.addressLabel.text = arrayOfCellData[indexPath.row].addressText
-            cell.phoneNumberLabel.text = arrayOfCellData[indexPath.row].phoneNumberText
-            cell.websiteLabel.text = arrayOfCellData[indexPath.row].websiteText
-            
-            return cell
-            
-        }
-    }
+//        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//            if arrayOfCellData[indexPath.row].cell == 3 {
+//                
+//                let cell = Bundle.main.loadNibNamed("TableViewCell3", owner: self, options: nil)?.first as! TableViewCell3
+//                
+//                cell.mainImageView.image = arrayOfCellData[indexPath.row].couponImage
+//                cell.companyLabel.text = arrayOfCellData[indexPath.row].companyText
+//                cell.addressLabel.text = arrayOfCellData[indexPath.row].addressText
+//                cell.phoneNumberLabel.text = arrayOfCellData[indexPath.row].phoneNumberText
+//                cell.websiteLabel.text = arrayOfCellData[indexPath.row].websiteText
+//                
+//                let tap = UITapGestureRecognizer(target: self, action: #selector(self.onClicLabel(sender:)))
+//                cell.websiteLabel.isUserInteractionEnabled = true
+//                cell.websiteLabel.addGestureRecognizer(tap)
+//                
+//                return cell
+//                
+//            } else {
+//                
+//                let cell = Bundle.main.loadNibNamed("TableViewCell3", owner: self, options: nil)?.first as! TableViewCell3
+//                
+//                cell.mainImageView.image = arrayOfCellData[indexPath.row].couponImage
+//                cell.companyLabel.text = arrayOfCellData[indexPath.row].companyText
+//                cell.addressLabel.text = arrayOfCellData[indexPath.row].addressText
+//                cell.phoneNumberLabel.text = arrayOfCellData[indexPath.row].phoneNumberText
+//                cell.websiteLabel.text = arrayOfCellData[indexPath.row].websiteText
+//                
+//                return cell
+//                
+//            }
+//        }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 700

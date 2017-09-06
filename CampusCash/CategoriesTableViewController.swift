@@ -97,7 +97,10 @@ class CategoriesTableViewController: UITableViewController {
         
         //bottomBarImage.addTarget(self, action: #selector(sendBottomBar), for: .touchDragInside)
         let swipeGestureRecognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer.init(target: self, action: #selector(sendTopBar))
+        let touchGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(sendTopBar))
         swipeGestureRecognizer.direction = UISwipeGestureRecognizerDirection.down
+        
+        topBarImage.addGestureRecognizer(touchGestureRecognizer)
         self.view.addGestureRecognizer(swipeGestureRecognizer)
         
         //bottomBarImage.frame = CGRect(x: 0 y: 0, width: 100, height: 200)
@@ -105,7 +108,7 @@ class CategoriesTableViewController: UITableViewController {
         //        view.sendSubview(toBack: topBarImage)
         
         topBarImage.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
-        topBarImage.bottomAnchor.constraint(equalTo: self.view.topAnchor, constant: 46).isActive = true
+        topBarImage.bottomAnchor.constraint(equalTo: self.view.topAnchor, constant: 36).isActive = true
         topBarImage.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
         topBarImage.heightAnchor.constraint(equalToConstant: 45).isActive = true
     }
