@@ -46,12 +46,20 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note: Tapping REDEEM COUPON will remove the coupon." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VaX-JC-e2y">
+                        <rect key="frame" x="36" y="266" width="342" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstAttribute="leadingMargin" secondItem="gPO-Da-Cjr" secondAttribute="leading" id="3Sb-PM-hXS"/>
                     <constraint firstAttribute="topMargin" secondItem="rF9-4t-F7M" secondAttribute="top" id="AAl-xC-hj6"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="VaX-JC-e2y" secondAttribute="trailing" constant="28" id="Aa0-GA-a3v"/>
                     <constraint firstAttribute="trailingMargin" secondItem="rF9-4t-F7M" secondAttribute="trailing" id="EdE-Kg-kA9"/>
+                    <constraint firstItem="VaX-JC-e2y" firstAttribute="leading" secondItem="ETz-9w-6e6" secondAttribute="leadingMargin" constant="28" id="Gy0-m7-Gz2"/>
                     <constraint firstItem="gPO-Da-Cjr" firstAttribute="top" secondItem="ETz-9w-6e6" secondAttribute="topMargin" constant="205" id="LF5-hn-7M6"/>
                     <constraint firstAttribute="leadingMargin" secondItem="cEn-g9-JM9" secondAttribute="leading" id="MbR-FJ-bqW"/>
                     <constraint firstItem="cEn-g9-JM9" firstAttribute="top" secondItem="ETz-9w-6e6" secondAttribute="topMargin" constant="180" id="RRN-VT-BqC"/>
@@ -60,6 +68,7 @@
                     <constraint firstAttribute="trailingMargin" secondItem="cEn-g9-JM9" secondAttribute="trailing" id="j5p-FE-b2A"/>
                     <constraint firstAttribute="leadingMargin" secondItem="B6I-aO-S5R" secondAttribute="leading" id="m94-sW-fyW"/>
                     <constraint firstAttribute="trailingMargin" secondItem="gPO-Da-Cjr" secondAttribute="trailing" id="oJW-TR-Zq6"/>
+                    <constraint firstItem="VaX-JC-e2y" firstAttribute="bottom" secondItem="ETz-9w-6e6" secondAttribute="bottomMargin" id="qGC-Pi-OJQ"/>
                     <constraint firstAttribute="trailingMargin" secondItem="B6I-aO-S5R" secondAttribute="trailing" id="r6M-a2-JTR"/>
                     <constraint firstAttribute="leadingMargin" secondItem="rF9-4t-F7M" secondAttribute="leading" id="uAL-2r-mme"/>
                 </constraints>

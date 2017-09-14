@@ -39,11 +39,11 @@ class Coupon2TableViewController: UITableViewController {
         
         arrayOfCompanyData = [companyData(cell: 1, addressText: selectAddressText, phoneNumberText: selectPhoneNumberText, websiteText: selectWebsiteText, companyImage: selectCompanyImage, companyColor: selectCompanyColor)]
         arrayOfCouponData = [couponData(cell: 2, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner4"), couponDetails: "DO NOT USE LEAVE AS A BLANK!DO NOT USE LEAVE AS A BLANK!DO NOT USE LEAVE AS A BLANK!DO NOT USE LEAVE AS A BLANK"),
-                             couponData(cell: 2, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner1"), couponDetails: "Buy one get 500% off every day for the rest of your life you god damn beautiful monster you!"),
-                             couponData(cell: 2, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner2"), couponDetails: "Buy one get 500% off every day for the rest of your life you god damn beautiful monster you!"),
-                             couponData(cell: 2, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner4"), couponDetails: "Buy one get 500% off every day for the rest of your life you god damn beautiful monster you!"),
-                             couponData(cell: 2, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner3"), couponDetails: "Details about the coupon"),
-                             couponData(cell: 2, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner2"), couponDetails: "Details about the coupon"),
+                             couponData(cell: 2, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner1"), couponDetails: "This will be exactly one sentence."),
+                             couponData(cell: 2, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner2"), couponDetails: "This will be exactly one sentence. This will be exactly two sentences."),
+                             couponData(cell: 2, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner4"), couponDetails: "This will be exactly one sentence. This will be exactly two sentences. This will be exactly 3 sentences."),
+                             couponData(cell: 2, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner3"), couponDetails: "This will be exactly one sentence. This will be exactly two sentences. This will be exactly 3 sentences. This will be exactly four sentences."),
+                             couponData(cell: 2, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner2"), couponDetails: "This will be exactly one sentence. This will be exactly two sentences. This will be exactly 3 sentences. This will be exactly four sentences. This will be exactly five sentences."),
                              couponData(cell: 2, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner4"), couponDetails: "Details about the coupon"),
                              couponData(cell: 2, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner3"), couponDetails: "Details about the coupon")]
     }
@@ -83,7 +83,13 @@ class Coupon2TableViewController: UITableViewController {
             cell.backgroundColor = UIColor.clear
             cell.selectionStyle = UITableViewCellSelectionStyle.none
             
+            cell.redeemCoupon.layer.cornerRadius = 9
+            cell.redeemCoupon.layer.borderColor = UIColor.black.cgColor
+            cell.redeemCoupon.layer.borderWidth = 1
+            
+            
             cell.couponDetails.lineBreakMode = NSLineBreakMode.byWordWrapping
+            cell.couponDetails.sizeToFit()
             cell.couponDetails.numberOfLines = 0
             
             return cell
@@ -105,16 +111,31 @@ class Coupon2TableViewController: UITableViewController {
             let background = CAGradientLayer().blueColor()
             background.frame = CGRect(x: 0, y: 0, width: 414, height: 400 * arrayOfCouponData.count)
             self.view.layer.insertSublayer(background, at: 0)
+            
+            let blurEffect = UIBlurEffect(style: .extraLight)
+            let blurEffectView = UIVisualEffectView(effect: blurEffect)
+            blurEffectView.frame = CGRect(x: 0, y: 0, width: 414, height: 400 * arrayOfCouponData.count)
+            self.view.insertSubview(blurEffectView, at: 0)
 
         } else if selectCompanyColor == "red" {
             let background = CAGradientLayer().redColor()
             background.frame = CGRect(x: 0, y: 0, width: 414, height: 400 * arrayOfCouponData.count)
             self.view.layer.insertSublayer(background, at: 0)
+            
+            let blurEffect = UIBlurEffect(style: .extraLight)
+            let blurEffectView = UIVisualEffectView(effect: blurEffect)
+            blurEffectView.frame = CGRect(x: 0, y: 0, width: 414, height: 400 * arrayOfCouponData.count)
+            self.view.insertSubview(blurEffectView, at: 0)
 
         } else if selectCompanyColor == "grey" {
             let background = CAGradientLayer().greyColor()
             background.frame = CGRect(x: 0, y: 0, width: 414, height: 400 * arrayOfCouponData.count)
             self.view.layer.insertSublayer(background, at: 0)
+            
+            let blurEffect = UIBlurEffect(style: .extraLight)
+            let blurEffectView = UIVisualEffectView(effect: blurEffect)
+            blurEffectView.frame = CGRect(x: 0, y: 0, width: 414, height: 400 * arrayOfCouponData.count)
+            self.view.insertSubview(blurEffectView, at: 0)
 
         } else {
             let background = CAGradientLayer().greyColor()
