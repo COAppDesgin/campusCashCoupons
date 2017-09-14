@@ -38,7 +38,7 @@ class CompaniesTableViewController: UITableViewController {
     override func viewDidLoad() {
         arrayOfCellData = [cellData(cell: 1, companyText: "Cosmos", addressText: "659 30th St, Boulder", phoneNumberText: "303-447-1133", websiteText: "cosmospizza.com", couponImage: #imageLiteral(resourceName: "Cosmos"), companyImage: #imageLiteral(resourceName: "Cosmos Pizza"), companyColor: "blue"),
                             cellData(cell: 1, companyText: "Half Fast Subs", addressText: "1215 13th Street", phoneNumberText: "303-449-0404", websiteText: "halffastsubs.com", couponImage: #imageLiteral(resourceName: "Half Fast Subs"), companyImage: #imageLiteral(resourceName: "Half Fast Subs-1"), companyColor: "red"),
-                            cellData(cell: 1, companyText: "The Corner", addressText: "2115 13th Street, corner of 13th & College", phoneNumberText: "720-398-8331", websiteText: "thecornerboulder.com", couponImage: #imageLiteral(resourceName: "The Corner"), companyImage: #imageLiteral(resourceName: "The Corner-1"), companyColor: "grey")]
+                            cellData(cell: 1, companyText: "The Corner", addressText: "2115 13th Street", phoneNumberText: "720-398-8331", websiteText: "thecornerboulder.com", couponImage: #imageLiteral(resourceName: "The Corner"), companyImage: #imageLiteral(resourceName: "The Corner-1"), companyColor: "grey")]
         
         
         self.navigationController?.navigationBar.isHidden = false

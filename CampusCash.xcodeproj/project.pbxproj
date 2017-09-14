@@ -19,6 +19,8 @@
 		4D1E09F51F3E3061008E25BE /* TableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D1E09F31F3E3061008E25BE /* TableViewCell2.xib */; };
 		4D7820621F605588005C2EDF /* Coupon2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7820611F605588005C2EDF /* Coupon2TableViewController.swift */; };
 		4D7820641F606762005C2EDF /* CAGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7820631F606762005C2EDF /* CAGradientLayer.swift */; };
+		4D7820671F6885D1005C2EDF /* TableViewCell4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7820651F6885D1005C2EDF /* TableViewCell4.swift */; };
+		4D7820681F6885D1005C2EDF /* TableViewCell4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D7820661F6885D1005C2EDF /* TableViewCell4.xib */; };
 		4DAFBE5E1F3D5AE700CFBF57 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DAFBE5D1F3D5AE700CFBF57 /* GoogleService-Info.plist */; };
 		4DAFBE601F3D5B4800CFBF57 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAFBE5F1F3D5B4800CFBF57 /* Launch Screen.storyboard */; };
 		4DAFBE631F3D5C2800CFBF57 /* secondSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAFBE621F3D5C2800CFBF57 /* secondSegue.swift */; };
@@ -68,6 +70,8 @@
 		4D1E09F31F3E3061008E25BE /* TableViewCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell2.xib; sourceTree = "<group>"; };
 		4D7820611F605588005C2EDF /* Coupon2TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coupon2TableViewController.swift; sourceTree = "<group>"; };
 		4D7820631F606762005C2EDF /* CAGradientLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAGradientLayer.swift; sourceTree = "<group>"; };
+		4D7820651F6885D1005C2EDF /* TableViewCell4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell4.swift; sourceTree = "<group>"; };
+		4D7820661F6885D1005C2EDF /* TableViewCell4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell4.xib; sourceTree = "<group>"; };
 		4DAFBE5D1F3D5AE700CFBF57 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4DAFBE5F1F3D5B4800CFBF57 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		4DAFBE611F3D5BFF00CFBF57 /* CampusCash.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CampusCash.entitlements; sourceTree = "<group>"; };
@@ -160,6 +164,8 @@
 				4D1E09F31F3E3061008E25BE /* TableViewCell2.xib */,
 				4D18FC4B1F4234B700173CE1 /* TableViewCell3.swift */,
 				4D18FC4C1F4234B700173CE1 /* TableViewCell3.xib */,
+				4D7820651F6885D1005C2EDF /* TableViewCell4.swift */,
+				4D7820661F6885D1005C2EDF /* TableViewCell4.xib */,
 			);
 			name = "View Cells";
 			sourceTree = "<group>";
@@ -368,6 +374,7 @@
 			files = (
 				4D1E09ED1F3E0D6C008E25BE /* TableViewCell1.xib in Resources */,
 				99D73A081F3AD54A00257F14 /* Assets.xcassets in Resources */,
+				4D7820681F6885D1005C2EDF /* TableViewCell4.xib in Resources */,
 				99D73A061F3AD54A00257F14 /* Main.storyboard in Resources */,
 				4DAFBE601F3D5B4800CFBF57 /* Launch Screen.storyboard in Resources */,
 				4D1E09F51F3E3061008E25BE /* TableViewCell2.xib in Resources */,
@@ -555,6 +562,7 @@
 				99D73A031F3AD54A00257F14 /* ViewController.swift in Sources */,
 				4DAFBE651F3D5C8000CFBF57 /* CategoriesTableViewController.swift in Sources */,
 				4DAFBE631F3D5C2800CFBF57 /* secondSegue.swift in Sources */,
+				4D7820671F6885D1005C2EDF /* TableViewCell4.swift in Sources */,
 				4D1E09EC1F3E0D6C008E25BE /* TableViewCell1.swift in Sources */,
 				4DAFBE671F3D5C8700CFBF57 /* TabViewController.swift in Sources */,
 				4D18FC521F426E7200173CE1 /* Rotate.swift in Sources */,
@@ -726,6 +734,7 @@
 				DEVELOPMENT_TEAM = 435YL82FQ2;
 				INFOPLIST_FILE = CampusCash/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "${BUILT_PRODUCTS_DIR}/libCordova.a";
 				PRODUCT_BUNDLE_IDENTIFIER = com.coappdesign.campuscashcoupons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
