@@ -28,24 +28,45 @@ struct couponData {
     
 }
 
+var decideCoupon: UIImage!
+
 class Coupon2TableViewController: UITableViewController {
+    
+    @IBAction func unwindToC2T(segue:UIStoryboardSegue) { }
     
     var arrayOfCompanyData = [companyData]()
     var arrayOfCouponData = [couponData]()
+    var redeemCoupon: UIButton!
+    var tab = UITabBarController()
+    
+    let selectFinalImage1 = #imageLiteral(resourceName: "$2Off")
+    let selectFinalImage2 = #imageLiteral(resourceName: "$3Off")
+    let selectFinalImage3 = #imageLiteral(resourceName: "$10.49TwoSubs")
+    let selectFinalImage4 = selectCouponImage
+    let selectFinalImage5 = selectCouponImage
+    let selectFinalImage6 = selectCouponImage
+    let selectFinalImage7 = selectCouponImage
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        arrayOfCompanyData = [companyData(cell: 1, addressText: selectAddressText, phoneNumberText: selectPhoneNumberText, websiteText: selectWebsiteText, companyImage: selectCompanyImage, companyColor: selectCompanyColor)]
-        arrayOfCouponData = [couponData(cell: 2, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner4"), couponDetails: "DO NOT USE LEAVE AS A BLANK!DO NOT USE LEAVE AS A BLANK!DO NOT USE LEAVE AS A BLANK!DO NOT USE LEAVE AS A BLANK"),
-                             couponData(cell: 2, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner1"), couponDetails: "This will be exactly one sentence."),
+        arrayOfCompanyData = [companyData(cell: 0, addressText: selectAddressText, phoneNumberText: selectPhoneNumberText, websiteText: selectWebsiteText, companyImage: selectCompanyImage, companyColor: selectCompanyColor)]
+        arrayOfCouponData = [couponData(cell: 0, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner4"), couponDetails: "DO NOT USE LEAVE AS A BLANK!DO NOT USE LEAVE AS A BLANK!DO NOT USE LEAVE AS A BLANK!DO NOT USE LEAVE AS A BLANK"),
+                             couponData(cell: 1, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner1"), couponDetails: "This will be exactly one sentence."),
                              couponData(cell: 2, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner2"), couponDetails: "This will be exactly one sentence. This will be exactly two sentences."),
-                             couponData(cell: 2, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner4"), couponDetails: "This will be exactly one sentence. This will be exactly two sentences. This will be exactly 3 sentences."),
-                             couponData(cell: 2, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner3"), couponDetails: "This will be exactly one sentence. This will be exactly two sentences. This will be exactly 3 sentences. This will be exactly four sentences."),
-                             couponData(cell: 2, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner2"), couponDetails: "This will be exactly one sentence. This will be exactly two sentences. This will be exactly 3 sentences. This will be exactly four sentences. This will be exactly five sentences."),
-                             couponData(cell: 2, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner4"), couponDetails: "Details about the coupon"),
-                             couponData(cell: 2, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner3"), couponDetails: "Details about the coupon")]
+                             couponData(cell: 3, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner4"), couponDetails: "This will be exactly one sentence. This will be exactly two sentences. This will be exactly 3 sentences."),
+                             couponData(cell: 4, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner3"), couponDetails: "This will be exactly one sentence. This will be exactly two sentences. This will be exactly 3 sentences. This will be exactly four sentences."),
+                             couponData(cell: 5, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner2"), couponDetails: "This will be exactly one sentence. This will be exactly two sentences. This will be exactly 3 sentences. This will be exactly four sentences. This will be exactly five sentences."),
+                             couponData(cell: 6, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner4"), couponDetails: "Details about the coupon"),
+                             couponData(cell: 7, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner3"), couponDetails: "Details about the coupon")]
+        
+        let userDefaults = UserDefaults.standard
+        guard let data = userDefaults.object(forKey: "myArrayKey") as? [couponData] else {
+            return
+        }
+        arrayOfCouponData = data
+        tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -83,20 +104,18 @@ class Coupon2TableViewController: UITableViewController {
             cell.backgroundColor = UIColor.clear
             cell.selectionStyle = UITableViewCellSelectionStyle.none
             
-            cell.redeemCoupon.layer.cornerRadius = 9
-            cell.redeemCoupon.layer.borderColor = UIColor.black.cgColor
-            cell.redeemCoupon.layer.borderWidth = 1
+            redeemCoupon = cell.redeemCoupon
+            redeemCoupon.layer.cornerRadius = 9
+            redeemCoupon.layer.borderColor = UIColor.black.cgColor
+            redeemCoupon.layer.borderWidth = 1
+            redeemCoupon.tag = arrayOfCouponData[indexPath.row].cell
             
+            redeemCoupon.addTarget(Any.self, action: #selector(sendAlready), for: .touchUpInside)
             
-            cell.couponDetails.lineBreakMode = NSLineBreakMode.byWordWrapping
             cell.couponDetails.sizeToFit()
-            cell.couponDetails.numberOfLines = 0
             
             return cell
-            
         }
-
-        
     }
     
     func onClicLabel(sender:UITapGestureRecognizer) {
@@ -104,7 +123,18 @@ class Coupon2TableViewController: UITableViewController {
         let url =  string + selectWebsiteText
         openUrl(urlString: url)
     }
-
+    
+//    func hideTableRow(redeemCell: Int!) {
+//        let indexPath = IndexPath()
+//        let myCell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell4",for: indexPath)
+//        
+//        if indexPath.row == redeemCell {
+//            myCell.isHidden = true
+//        } else {
+//            myCell.isHidden = false
+//        }
+//    }
+    
     func backgroundColor() {
 
         if selectCompanyColor == "blue" {
@@ -143,9 +173,41 @@ class Coupon2TableViewController: UITableViewController {
             self.view.layer.insertSublayer(background, at: 0)
 
         }
-
+    }
+    
+    func sendRedeem(redeemCell: Int!) {
+        
+        if redeemCell == 1 {
+            decideCoupon = selectFinalImage1
+        }else if redeemCell == 2 {
+            decideCoupon = selectFinalImage2
+        }else if redeemCell == 3 {
+            decideCoupon = selectFinalImage3
+        }else if redeemCell == 4 {
+            decideCoupon = selectFinalImage4
+        }else if redeemCell == 5 {
+            decideCoupon = selectFinalImage5
+        }else if redeemCell == 6 {
+            decideCoupon = selectFinalImage6
+        }else if redeemCell == 7 {
+            decideCoupon = selectFinalImage7
+        }else {
+            decideCoupon = selectFinalImage1
+        }
+    }
+    
+    func sendAlready() {
+        let alert = UIAlertController(title: "Redeem Coupon?", message: "This coupon will be removed after the redeem button has been pressed!", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { action in
+            self.performSegue(withIdentifier: "couponSegue", sender: self)
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 
+    @IBAction func goBackToOneButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "unwindSegueToC2T", sender: self)
+    }
 
     func openUrl(urlString:String!) {
         let url = URL(string: urlString)!
@@ -163,9 +225,5 @@ class Coupon2TableViewController: UITableViewController {
         } else {
             return 366
         }
-        
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
 }

@@ -23,33 +23,33 @@
                         <rect key="frame" x="0.0" y="8" width="414" height="191"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6O-bN-ZRK">
-                        <rect key="frame" x="57" y="182" width="300" height="46"/>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="24"/>
+                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6O-bN-ZRK">
+                        <rect key="frame" x="57" y="182" width="300" height="50"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="24"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <state key="normal" title="REDEEM COUPON">
-                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <state key="normal" title="REDEEM COUPON" backgroundImage="REDEEM COUPON">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="redeemCouponPressed:" destination="tgm-VG-Tsc" eventType="touchUpInside" id="YFo-6H-2NG"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DETAILS:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5F-xK-oQf">
-                        <rect key="frame" x="8" y="230" width="85" height="37"/>
+                        <rect key="frame" x="8" y="234" width="75" height="37"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="37" id="evW-VR-E8x"/>
-                            <constraint firstAttribute="width" constant="85" id="rOO-VE-9vB"/>
+                            <constraint firstAttribute="width" constant="75" id="rOO-VE-9vB"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="18"/>
+                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytA-e5-ilc">
-                        <rect key="frame" x="101" y="236" width="303" height="23"/>
+                        <rect key="frame" x="91" y="240" width="303" height="23"/>
                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="sizeToFit" value="YES"/>
-                        </userDefinedRuntimeAttributes>
                     </label>
                 </subviews>
                 <constraints>
@@ -57,7 +57,7 @@
                     <constraint firstItem="L6O-bN-ZRK" firstAttribute="leading" secondItem="kUa-tM-NwQ" secondAttribute="leadingMargin" constant="49" id="4AJ-Eu-Llz"/>
                     <constraint firstItem="y5F-xK-oQf" firstAttribute="leading" secondItem="kUa-tM-NwQ" secondAttribute="leadingMargin" id="JLD-a9-zgE"/>
                     <constraint firstItem="y5F-xK-oQf" firstAttribute="top" secondItem="L6O-bN-ZRK" secondAttribute="bottom" constant="2" id="NGb-QN-P4A"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="ytA-e5-ilc" secondAttribute="trailing" constant="2" id="cbg-xp-jvV"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ytA-e5-ilc" secondAttribute="trailing" constant="12" id="cbg-xp-jvV"/>
                     <constraint firstItem="ytA-e5-ilc" firstAttribute="top" secondItem="L6O-bN-ZRK" secondAttribute="bottom" constant="8" symbolic="YES" id="fGc-G3-Mvc"/>
                     <constraint firstItem="L6O-bN-ZRK" firstAttribute="top" secondItem="kUa-tM-NwQ" secondAttribute="topMargin" constant="174" id="pFx-ob-ry3"/>
                     <constraint firstAttribute="trailingMargin" secondItem="L6O-bN-ZRK" secondAttribute="trailing" constant="49" id="xvR-Tt-2p6"/>
@@ -71,4 +71,7 @@
             <point key="canvasLocation" x="-118" y="28"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="REDEEM COUPON" width="354" height="50"/>
+    </resources>
 </document>

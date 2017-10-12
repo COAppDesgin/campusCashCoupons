@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4C021C16A387651D73943A1D /* Pods_CampusCashUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D8AF2996D30DAE68297242 /* Pods_CampusCashUITests.framework */; };
-		4D18FC461F4232CF00173CE1 /* CouponTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18FC451F4232CF00173CE1 /* CouponTableViewController.swift */; };
+		4D0D5B511F7D6CC500DE70FB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0D5B501F7D6CC500DE70FB /* CoreLocation.framework */; };
 		4D18FC4D1F4234B700173CE1 /* TableViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18FC4B1F4234B700173CE1 /* TableViewCell3.swift */; };
 		4D18FC4E1F4234B700173CE1 /* TableViewCell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D18FC4C1F4234B700173CE1 /* TableViewCell3.xib */; };
 		4D18FC521F426E7200173CE1 /* Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18FC511F426E7200173CE1 /* Rotate.swift */; };
@@ -17,10 +17,19 @@
 		4D1E09ED1F3E0D6C008E25BE /* TableViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D1E09EB1F3E0D6C008E25BE /* TableViewCell1.xib */; };
 		4D1E09F41F3E3061008E25BE /* TableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E09F21F3E3061008E25BE /* TableViewCell2.swift */; };
 		4D1E09F51F3E3061008E25BE /* TableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D1E09F31F3E3061008E25BE /* TableViewCell2.xib */; };
+		4D5841D81F73467900E22655 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5841D71F73467900E22655 /* FinalViewController.swift */; };
+		4D5841DE1F736A7B00E22655 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5841DD1F736A7B00E22655 /* NavigationViewController.swift */; };
+		4D5841E01F7C55D800E22655 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5841DF1F7C55D800E22655 /* MapKit.framework */; };
+		4D5841E21F7C568700E22655 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5841E11F7C568700E22655 /* MapViewController.swift */; };
+		4D5841E51F7C5BA600E22655 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5841E41F7C5BA600E22655 /* LocationManager.swift */; };
 		4D7820621F605588005C2EDF /* Coupon2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7820611F605588005C2EDF /* Coupon2TableViewController.swift */; };
 		4D7820641F606762005C2EDF /* CAGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7820631F606762005C2EDF /* CAGradientLayer.swift */; };
 		4D7820671F6885D1005C2EDF /* TableViewCell4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7820651F6885D1005C2EDF /* TableViewCell4.swift */; };
 		4D7820681F6885D1005C2EDF /* TableViewCell4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D7820661F6885D1005C2EDF /* TableViewCell4.xib */; };
+		4D99BEA31F8FF7BD00886E09 /* couponSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D99BEA21F8FF7BD00886E09 /* couponSegue.swift */; };
+		4D99BEA71F90006D00886E09 /* CustomAnnotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D99BEA61F90006D00886E09 /* CustomAnnotations.swift */; };
+		4D99BEC01F9002B900886E09 /* CustomCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D99BEB21F9002B900886E09 /* CustomCalloutView.swift */; };
+		4D99BEC11F9002B900886E09 /* CustomCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D99BEB31F9002B900886E09 /* CustomCalloutView.xib */; };
 		4DAFBE5E1F3D5AE700CFBF57 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DAFBE5D1F3D5AE700CFBF57 /* GoogleService-Info.plist */; };
 		4DAFBE601F3D5B4800CFBF57 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAFBE5F1F3D5B4800CFBF57 /* Launch Screen.storyboard */; };
 		4DAFBE631F3D5C2800CFBF57 /* secondSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAFBE621F3D5C2800CFBF57 /* secondSegue.swift */; };
@@ -28,6 +37,7 @@
 		4DAFBE671F3D5C8700CFBF57 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAFBE661F3D5C8700CFBF57 /* TabViewController.swift */; };
 		4DAFBE691F3D5C8D00CFBF57 /* CampusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAFBE681F3D5C8D00CFBF57 /* CampusTableViewController.swift */; };
 		4DAFBE741F3D750600CFBF57 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAFBE731F3D750600CFBF57 /* SearchTableViewController.swift */; };
+		4DBB9EB31F9005630015CACE /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBB9EB21F9005630015CACE /* AnnotationView.swift */; };
 		99D73A011F3AD54900257F14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D73A001F3AD54900257F14 /* AppDelegate.swift */; };
 		99D73A031F3AD54A00257F14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D73A021F3AD54A00257F14 /* ViewController.swift */; };
 		99D73A061F3AD54A00257F14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D73A041F3AD54A00257F14 /* Main.storyboard */; };
@@ -59,7 +69,7 @@
 /* Begin PBXFileReference section */
 		37210B3B6ED954717B1006CA /* Pods-CampusCash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusCash.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CampusCash/Pods-CampusCash.debug.xcconfig"; sourceTree = "<group>"; };
 		3A6A87D9BEDD7C364354A50E /* Pods-CampusCash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusCash.release.xcconfig"; path = "Pods/Target Support Files/Pods-CampusCash/Pods-CampusCash.release.xcconfig"; sourceTree = "<group>"; };
-		4D18FC451F4232CF00173CE1 /* CouponTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponTableViewController.swift; sourceTree = "<group>"; };
+		4D0D5B501F7D6CC500DE70FB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4D18FC4B1F4234B700173CE1 /* TableViewCell3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell3.swift; sourceTree = "<group>"; };
 		4D18FC4C1F4234B700173CE1 /* TableViewCell3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell3.xib; sourceTree = "<group>"; };
 		4D18FC511F426E7200173CE1 /* Rotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rotate.swift; sourceTree = "<group>"; };
@@ -69,10 +79,19 @@
 		4D1E09F21F3E3061008E25BE /* TableViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell2.swift; sourceTree = "<group>"; };
 		4D1E09F31F3E3061008E25BE /* TableViewCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell2.xib; sourceTree = "<group>"; };
 		4D5841D41F6B1D4A00E22655 /* CampusCash-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CampusCash-Bridging-Header.h"; sourceTree = "<group>"; };
+		4D5841D71F73467900E22655 /* FinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
+		4D5841DD1F736A7B00E22655 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		4D5841DF1F7C55D800E22655 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4D5841E11F7C568700E22655 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		4D5841E41F7C5BA600E22655 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		4D7820611F605588005C2EDF /* Coupon2TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coupon2TableViewController.swift; sourceTree = "<group>"; };
 		4D7820631F606762005C2EDF /* CAGradientLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAGradientLayer.swift; sourceTree = "<group>"; };
 		4D7820651F6885D1005C2EDF /* TableViewCell4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell4.swift; sourceTree = "<group>"; };
 		4D7820661F6885D1005C2EDF /* TableViewCell4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell4.xib; sourceTree = "<group>"; };
+		4D99BEA21F8FF7BD00886E09 /* couponSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = couponSegue.swift; sourceTree = "<group>"; };
+		4D99BEA61F90006D00886E09 /* CustomAnnotations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotations.swift; sourceTree = "<group>"; };
+		4D99BEB21F9002B900886E09 /* CustomCalloutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCalloutView.swift; sourceTree = "<group>"; };
+		4D99BEB31F9002B900886E09 /* CustomCalloutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCalloutView.xib; sourceTree = "<group>"; };
 		4DAFBE5D1F3D5AE700CFBF57 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4DAFBE5F1F3D5B4800CFBF57 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		4DAFBE611F3D5BFF00CFBF57 /* CampusCash.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CampusCash.entitlements; sourceTree = "<group>"; };
@@ -82,6 +101,7 @@
 		4DAFBE681F3D5C8D00CFBF57 /* CampusTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampusTableViewController.swift; sourceTree = "<group>"; };
 		4DAFBE721F3D717D00CFBF57 /* PureLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
 		4DAFBE731F3D750600CFBF57 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		4DBB9EB21F9005630015CACE /* AnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnnotationView.swift; path = "../../../../../Downloads/CustomCalloutView-Final Project 2/CustomCalloutView/AnnotationView.swift"; sourceTree = "<group>"; };
 		55883FEE85958F1362E794A9 /* Pods_CampusCash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampusCash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65426CF38248BBF66EA47D8A /* Pods-CampusCashUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusCashUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CampusCashUITests/Pods-CampusCashUITests.release.xcconfig"; sourceTree = "<group>"; };
 		99D739FD1F3AD54900257F14 /* CampusCash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampusCash.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +129,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D0D5B511F7D6CC500DE70FB /* CoreLocation.framework in Frameworks */,
+				4D5841E01F7C55D800E22655 /* MapKit.framework in Frameworks */,
 				D53869D9C8386DEED350AB6A /* Pods_CampusCash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,6 +167,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4D5841E31F7C569000E22655 /* Map Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4D5841E41F7C5BA600E22655 /* LocationManager.swift */,
+				4D5841E11F7C568700E22655 /* MapViewController.swift */,
+				4D99BEA61F90006D00886E09 /* CustomAnnotations.swift */,
+				4DBB9EB21F9005630015CACE /* AnnotationView.swift */,
+			);
+			name = "Map Controllers";
+			sourceTree = "<group>";
+		};
 		4D8CD4DC1F3E44920036A069 /* Segue */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +185,7 @@
 				4D7820631F606762005C2EDF /* CAGradientLayer.swift */,
 				ED1FCFC81F3BE78C00F94A17 /* firstSegue.swift */,
 				4DAFBE621F3D5C2800CFBF57 /* secondSegue.swift */,
+				4D99BEA21F8FF7BD00886E09 /* couponSegue.swift */,
 			);
 			name = Segue;
 			sourceTree = "<group>";
@@ -159,6 +193,7 @@
 		4D8CD4DD1F3E44A40036A069 /* View Cells */ = {
 			isa = PBXGroup;
 			children = (
+				4D99BEAA1F9002B900886E09 /* CustomCalloutView */,
 				4D1E09EA1F3E0D6C008E25BE /* TableViewCell1.swift */,
 				4D1E09EB1F3E0D6C008E25BE /* TableViewCell1.xib */,
 				4D1E09F21F3E3061008E25BE /* TableViewCell2.swift */,
@@ -167,21 +202,31 @@
 				4D18FC4C1F4234B700173CE1 /* TableViewCell3.xib */,
 				4D7820651F6885D1005C2EDF /* TableViewCell4.swift */,
 				4D7820661F6885D1005C2EDF /* TableViewCell4.xib */,
+				4D5841DD1F736A7B00E22655 /* NavigationViewController.swift */,
 			);
 			name = "View Cells";
 			sourceTree = "<group>";
 		};
-		4D8CD4DE1F3E44CE0036A069 /* Controllers */ = {
+		4D8CD4DE1F3E44CE0036A069 /* Category Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4DAFBE731F3D750600CFBF57 /* SearchTableViewController.swift */,
 				4DAFBE641F3D5C8000CFBF57 /* CategoriesTableViewController.swift */,
-				4D18FC451F4232CF00173CE1 /* CouponTableViewController.swift */,
 				4D7820611F605588005C2EDF /* Coupon2TableViewController.swift */,
+				4D5841D71F73467900E22655 /* FinalViewController.swift */,
 				4D1E09E61F3DFE8D008E25BE /* CompaniesTableViewController.swift */,
 				4DAFBE681F3D5C8D00CFBF57 /* CampusTableViewController.swift */,
 			);
-			name = Controllers;
+			name = "Category Controllers";
+			sourceTree = "<group>";
+		};
+		4D99BEAA1F9002B900886E09 /* CustomCalloutView */ = {
+			isa = PBXGroup;
+			children = (
+				4D99BEB21F9002B900886E09 /* CustomCalloutView.swift */,
+				4D99BEB31F9002B900886E09 /* CustomCalloutView.xib */,
+			);
+			name = CustomCalloutView;
+			path = "../../../../../Downloads/CustomCalloutView-Final Project/CustomCalloutView";
 			sourceTree = "<group>";
 		};
 		99D739F41F3AD54900257F14 = {
@@ -214,8 +259,10 @@
 				99D73A001F3AD54900257F14 /* AppDelegate.swift */,
 				99D73A021F3AD54A00257F14 /* ViewController.swift */,
 				4DAFBE661F3D5C8700CFBF57 /* TabViewController.swift */,
+				4DAFBE731F3D750600CFBF57 /* SearchTableViewController.swift */,
+				4D5841E31F7C569000E22655 /* Map Controllers */,
 				4D8CD4DC1F3E44920036A069 /* Segue */,
-				4D8CD4DE1F3E44CE0036A069 /* Controllers */,
+				4D8CD4DE1F3E44CE0036A069 /* Category Controllers */,
 				4D8CD4DD1F3E44A40036A069 /* View Cells */,
 				99D73A041F3AD54A00257F14 /* Main.storyboard */,
 				4DAFBE5F1F3D5B4800CFBF57 /* Launch Screen.storyboard */,
@@ -248,6 +295,8 @@
 		D2D731E007097951CEBB1B6D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4D0D5B501F7D6CC500DE70FB /* CoreLocation.framework */,
+				4D5841DF1F7C55D800E22655 /* MapKit.framework */,
 				55883FEE85958F1362E794A9 /* Pods_CampusCash.framework */,
 				B18B2AC3A2D6CE1F7827C6A0 /* Pods_CampusCashTests.framework */,
 				A0D8AF2996D30DAE68297242 /* Pods_CampusCashUITests.framework */,
@@ -335,6 +384,11 @@
 						DevelopmentTeam = 435YL82FQ2;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					99D73A101F3AD54A00257F14 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -378,6 +432,7 @@
 				4D1E09ED1F3E0D6C008E25BE /* TableViewCell1.xib in Resources */,
 				99D73A081F3AD54A00257F14 /* Assets.xcassets in Resources */,
 				4D7820681F6885D1005C2EDF /* TableViewCell4.xib in Resources */,
+				4D99BEC11F9002B900886E09 /* CustomCalloutView.xib in Resources */,
 				99D73A061F3AD54A00257F14 /* Main.storyboard in Resources */,
 				4DAFBE601F3D5B4800CFBF57 /* Launch Screen.storyboard in Resources */,
 				4D1E09F51F3E3061008E25BE /* TableViewCell2.xib in Resources */,
@@ -560,19 +615,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED1FCFC91F3BE78C00F94A17 /* firstSegue.swift in Sources */,
+				4D99BEA31F8FF7BD00886E09 /* couponSegue.swift in Sources */,
+				4D5841D81F73467900E22655 /* FinalViewController.swift in Sources */,
 				4D18FC4D1F4234B700173CE1 /* TableViewCell3.swift in Sources */,
 				4DAFBE691F3D5C8D00CFBF57 /* CampusTableViewController.swift in Sources */,
 				99D73A031F3AD54A00257F14 /* ViewController.swift in Sources */,
 				4DAFBE651F3D5C8000CFBF57 /* CategoriesTableViewController.swift in Sources */,
 				4DAFBE631F3D5C2800CFBF57 /* secondSegue.swift in Sources */,
+				4D5841E21F7C568700E22655 /* MapViewController.swift in Sources */,
+				4D5841DE1F736A7B00E22655 /* NavigationViewController.swift in Sources */,
 				4D7820671F6885D1005C2EDF /* TableViewCell4.swift in Sources */,
 				4D1E09EC1F3E0D6C008E25BE /* TableViewCell1.swift in Sources */,
 				4DAFBE671F3D5C8700CFBF57 /* TabViewController.swift in Sources */,
+				4D5841E51F7C5BA600E22655 /* LocationManager.swift in Sources */,
 				4D18FC521F426E7200173CE1 /* Rotate.swift in Sources */,
+				4D99BEA71F90006D00886E09 /* CustomAnnotations.swift in Sources */,
+				4DBB9EB31F9005630015CACE /* AnnotationView.swift in Sources */,
 				99D73A011F3AD54900257F14 /* AppDelegate.swift in Sources */,
+				4D99BEC01F9002B900886E09 /* CustomCalloutView.swift in Sources */,
 				4D7820621F605588005C2EDF /* Coupon2TableViewController.swift in Sources */,
 				4DAFBE741F3D750600CFBF57 /* SearchTableViewController.swift in Sources */,
-				4D18FC461F4232CF00173CE1 /* CouponTableViewController.swift in Sources */,
 				4D1E09F41F3E3061008E25BE /* TableViewCell2.swift in Sources */,
 				4D1E09E71F3DFE8D008E25BE /* CompaniesTableViewController.swift in Sources */,
 				4D7820641F606762005C2EDF /* CAGradientLayer.swift in Sources */,
@@ -741,7 +803,56 @@
 				DEVELOPMENT_TEAM = 435YL82FQ2;
 				INFOPLIST_FILE = CampusCash/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "${BUILT_PRODUCTS_DIR}/libCordova.a";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"stdc++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AddressBook\"",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreMotion\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"GGLCore\"",
+					"-framework",
+					"\"GGLSignIn\"",
+					"-framework",
+					"\"GTMOAuth2\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleSignIn\"",
+					"-framework",
+					"\"GoogleToolboxForMac\"",
+					"-framework",
+					"\"MessageUI\"",
+					"-framework",
+					"\"PureLayout\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.coappdesign.campuscashcoupons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CampusCash/CampusCash-Bridging-Header.h";

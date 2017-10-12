@@ -76,8 +76,7 @@ class CategoriesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        index = indexPath.row
-        print(index)
+
         if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CompaniesTableViewController") as? CompaniesTableViewController {
             if let navigator = navigationController {
                 navigator.pushViewController(viewController, animated: true)
