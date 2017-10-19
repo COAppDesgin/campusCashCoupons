@@ -30,6 +30,8 @@
 		4D99BEA71F90006D00886E09 /* CustomAnnotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D99BEA61F90006D00886E09 /* CustomAnnotations.swift */; };
 		4D99BEC01F9002B900886E09 /* CustomCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D99BEB21F9002B900886E09 /* CustomCalloutView.swift */; };
 		4D99BEC11F9002B900886E09 /* CustomCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D99BEB31F9002B900886E09 /* CustomCalloutView.xib */; };
+		4DA27DC01F97F2C20007E2B2 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA27DBF1F97F2C20007E2B2 /* SWRevealViewController.m */; };
+		4DA27DC21F98087D0007E2B2 /* MapCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA27DC11F98087D0007E2B2 /* MapCategoriesViewController.swift */; };
 		4DAFBE5E1F3D5AE700CFBF57 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DAFBE5D1F3D5AE700CFBF57 /* GoogleService-Info.plist */; };
 		4DAFBE601F3D5B4800CFBF57 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAFBE5F1F3D5B4800CFBF57 /* Launch Screen.storyboard */; };
 		4DAFBE631F3D5C2800CFBF57 /* secondSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAFBE621F3D5C2800CFBF57 /* secondSegue.swift */; };
@@ -92,6 +94,9 @@
 		4D99BEA61F90006D00886E09 /* CustomAnnotations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotations.swift; sourceTree = "<group>"; };
 		4D99BEB21F9002B900886E09 /* CustomCalloutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCalloutView.swift; sourceTree = "<group>"; };
 		4D99BEB31F9002B900886E09 /* CustomCalloutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCalloutView.xib; sourceTree = "<group>"; };
+		4DA27DBE1F97F2C20007E2B2 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		4DA27DBF1F97F2C20007E2B2 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		4DA27DC11F98087D0007E2B2 /* MapCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCategoriesViewController.swift; sourceTree = "<group>"; };
 		4DAFBE5D1F3D5AE700CFBF57 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4DAFBE5F1F3D5B4800CFBF57 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		4DAFBE611F3D5BFF00CFBF57 /* CampusCash.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CampusCash.entitlements; sourceTree = "<group>"; };
@@ -171,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				4D5841E41F7C5BA600E22655 /* LocationManager.swift */,
+				4DA27DC11F98087D0007E2B2 /* MapCategoriesViewController.swift */,
 				4D5841E11F7C568700E22655 /* MapViewController.swift */,
 				4D99BEA61F90006D00886E09 /* CustomAnnotations.swift */,
 				4DBB9EB21F9005630015CACE /* AnnotationView.swift */,
@@ -229,6 +235,16 @@
 			path = "../../../../../Downloads/CustomCalloutView-Final Project/CustomCalloutView";
 			sourceTree = "<group>";
 		};
+		4DA27DBD1F97F2C20007E2B2 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4DA27DBE1F97F2C20007E2B2 /* SWRevealViewController.h */,
+				4DA27DBF1F97F2C20007E2B2 /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
+			path = "../../../../../Downloads/SWRevealViewController-master 2/SWRevealViewController";
+			sourceTree = "<group>";
+		};
 		99D739F41F3AD54900257F14 = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +283,7 @@
 				99D73A041F3AD54A00257F14 /* Main.storyboard */,
 				4DAFBE5F1F3D5B4800CFBF57 /* Launch Screen.storyboard */,
 				99D73A071F3AD54A00257F14 /* Assets.xcassets */,
+				4DA27DBD1F97F2C20007E2B2 /* SWRevealViewController */,
 				99D73A0C1F3AD54A00257F14 /* Info.plist */,
 				4DAFBE5D1F3D5AE700CFBF57 /* GoogleService-Info.plist */,
 				4D5841D41F6B1D4A00E22655 /* CampusCash-Bridging-Header.h */,
@@ -626,6 +643,7 @@
 				4D5841DE1F736A7B00E22655 /* NavigationViewController.swift in Sources */,
 				4D7820671F6885D1005C2EDF /* TableViewCell4.swift in Sources */,
 				4D1E09EC1F3E0D6C008E25BE /* TableViewCell1.swift in Sources */,
+				4DA27DC01F97F2C20007E2B2 /* SWRevealViewController.m in Sources */,
 				4DAFBE671F3D5C8700CFBF57 /* TabViewController.swift in Sources */,
 				4D5841E51F7C5BA600E22655 /* LocationManager.swift in Sources */,
 				4D18FC521F426E7200173CE1 /* Rotate.swift in Sources */,
@@ -636,6 +654,7 @@
 				4D7820621F605588005C2EDF /* Coupon2TableViewController.swift in Sources */,
 				4DAFBE741F3D750600CFBF57 /* SearchTableViewController.swift in Sources */,
 				4D1E09F41F3E3061008E25BE /* TableViewCell2.swift in Sources */,
+				4DA27DC21F98087D0007E2B2 /* MapCategoriesViewController.swift in Sources */,
 				4D1E09E71F3DFE8D008E25BE /* CompaniesTableViewController.swift in Sources */,
 				4D7820641F606762005C2EDF /* CAGradientLayer.swift in Sources */,
 			);
