@@ -19,27 +19,27 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="49.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqq-VY-xpd">
+                        <rect key="frame" x="72" y="13" width="334" height="24"/>
+                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w6n-wB-hqq">
-                        <rect key="frame" x="8" y="8" width="33" height="33"/>
+                        <rect key="frame" x="27" y="8" width="33" height="33"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="33" id="E3a-7h-2pY"/>
                             <constraint firstAttribute="height" constant="33" id="gSz-Gk-BqM"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqq-VY-xpd">
-                        <rect key="frame" x="49" y="10" width="357" height="29"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="w6n-wB-hqq" secondAttribute="trailing" constant="365" id="V6s-Aj-E9W"/>
-                    <constraint firstAttribute="leadingMargin" secondItem="w6n-wB-hqq" secondAttribute="leading" id="Y84-ai-Z2P"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="w6n-wB-hqq" secondAttribute="trailing" constant="346" id="V6s-Aj-E9W"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="w6n-wB-hqq" secondAttribute="leading" constant="-19" id="Y84-ai-Z2P"/>
                     <constraint firstAttribute="topMargin" secondItem="w6n-wB-hqq" secondAttribute="top" id="kxT-LA-1Hb"/>
                     <constraint firstAttribute="trailingMargin" secondItem="eqq-VY-xpd" secondAttribute="trailing" id="mnU-ZO-8X3"/>
                     <constraint firstItem="eqq-VY-xpd" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="uD6-bB-E5b"/>
-                    <constraint firstItem="eqq-VY-xpd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="41" id="xQU-mg-sNl"/>
+                    <constraint firstItem="eqq-VY-xpd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="64" id="xQU-mg-sNl"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

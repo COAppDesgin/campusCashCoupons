@@ -7,6 +7,8 @@
 //
 
 import XCTest
+import FirebaseCore
+
 @testable import CampusCash
 
 class CampusCashTests: XCTestCase {

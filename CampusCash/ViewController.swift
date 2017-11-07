@@ -6,6 +6,7 @@
 //  Copyright © 2017 Hans von Clemm. All rights reserved.
 //
 
+
 import UIKit
 import PureLayout
 
@@ -20,6 +21,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognize
     var scrollView: UIScrollView!
     var imageArray = [UIImage]()
     var selectCity: UILabel!
+    var number: Int = 0
 
     var searchButton: UIButton!
     let searchButtonStartingCornerRadius: CGFloat = 20
@@ -37,7 +39,6 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognize
         setupBottomBar()
         setupSearchButton()
         addSelectCityLabel()
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,9 +60,15 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognize
         scrollView.isUserInteractionEnabled = true
         view.addSubview(scrollView)
         
+//        let pageIndex = round(scrollView.contentOffset.x/view.frame.width)
+        let defaults = UserDefaults.standard
+//        defaults.set(pageIndex, forKey: "pageIndex")
+        
         imageArray = [UIImage(named: "cityCampusBottom")!, UIImage(named: "logoBottomCU")!, UIImage(named:"logoBottomCSU")!]
         
         for i in 0..<imageArray.count {
+            number = defaults.integer(forKey: "pageIndex")
+            pageControl.currentPage = Int(number)
             
             let imageView = UIImageView()
             imageView.image = imageArray[i]
@@ -70,6 +77,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognize
             imageView.frame = CGRect(x: xPosition, y: 55, width: self.scrollView.frame.width, height: self.scrollView.frame.height - 100)
             
             scrollView.contentSize.width = scrollView.frame.width * CGFloat(i + 1)
+            scrollView.setContentOffset(CGPoint(x: self.view.frame.width * CGFloat(number), y: 0), animated: true)
             scrollView.isPagingEnabled = true
             scrollView.addSubview(imageView)
         }
@@ -83,13 +91,15 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognize
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(setPageControl), userInfo: nil, repeats: false)
+    }
+    
+    @objc func setPageControl() {
         let pageIndex = round(scrollView.contentOffset.x/view.frame.width)
         let defaults = UserDefaults.standard
-        defaults.set(pageIndex, forKey: "pageIndex")
-        defaults.synchronize()
-        
+    
         print(pageIndex)
-        
+        defaults.set(pageIndex, forKey: "pageIndex")
         pageControl.currentPage = defaults.integer(forKey: "pageIndex")
     }
     
@@ -120,7 +130,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognize
         bottomBarImage.heightAnchor.constraint(equalToConstant: 60).isActive = true
     }
     
-    func sendBottomBar() {
+    @objc func sendBottomBar() {
         
         self.performSegue(withIdentifier: "firstSegue", sender: self)
     }
@@ -155,7 +165,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognize
         searchButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
-    func searchClicked(sender: UIButton!) {
+    @objc func searchClicked(sender: UIButton!) {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "SearchTableViewController") as! UITableViewController
         let navController = UINavigationController(rootViewController: vc)
@@ -170,7 +180,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognize
         let selectCity = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
         selectCity.text = "Select your city below:"
         selectCity.center = CGPoint(x: self.view.frame.width/2, y: self.view.frame.height/2 + 125)
-        selectCity.textColor = UIColor.blue
+        selectCity.textColor = UIColor.white
         selectCity.textAlignment = .center
         
         view.addSubview(selectCity)

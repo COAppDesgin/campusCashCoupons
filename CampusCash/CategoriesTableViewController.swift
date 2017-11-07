@@ -35,10 +35,15 @@ class CategoriesTableViewController: UITableViewController {
                                  categoriesData(cell: 2, categoriesImage: #imageLiteral(resourceName: "Retail"), categoriesLabel: "Retail"),
                                  categoriesData(cell: 2, categoriesImage: #imageLiteral(resourceName: "Salons"), categoriesLabel: "Salons"),
                                  categoriesData(cell: 2, categoriesImage: #imageLiteral(resourceName: "Services"), categoriesLabel: "Services"),
-                                 categoriesData(cell: 2, categoriesImage: #imageLiteral(resourceName: "Tanning"), categoriesLabel: "Tanning")]
-        
+                                 categoriesData(cell: 2, categoriesImage: #imageLiteral(resourceName: "Tanning"), categoriesLabel: "Tanning"), categoriesData(cell: 2, categoriesImage: #imageLiteral(resourceName: "nil"), categoriesLabel: "")]
+        setupTableView()
+        setupBackground()
         setupSearchBar()
         setupTopBar()
+    }
+    
+    func setupTableView() {
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,6 +63,9 @@ class CategoriesTableViewController: UITableViewController {
             cell.mainImageView.image = arrayOfCategoriesData[indexPath.row].categoriesImage
             cell.categoriesLabel.text = arrayOfCategoriesData[indexPath.row].categoriesLabel
             
+            cell.backgroundColor = UIColor.clear
+            cell.selectionStyle = UITableViewCellSelectionStyle.none
+            
             return cell
             
         } else {
@@ -66,6 +74,9 @@ class CategoriesTableViewController: UITableViewController {
             
             cell.mainImageView.image = arrayOfCategoriesData[indexPath.row].categoriesImage
             cell.categoriesLabel.text = arrayOfCategoriesData[indexPath.row].categoriesLabel
+            
+            cell.backgroundColor = UIColor.clear
+            cell.selectionStyle = UITableViewCellSelectionStyle.none
             
             return cell
         }
@@ -76,6 +87,8 @@ class CategoriesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cellToDeSelect:UITableViewCell = tableView.cellForRow(at: indexPath)!
+        cellToDeSelect.selectedBackgroundView?.tintColor = UIColor.clear
 
         if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CompaniesTableViewController") as? CompaniesTableViewController {
             if let navigator = navigationController {
@@ -107,12 +120,12 @@ class CategoriesTableViewController: UITableViewController {
         //        view.sendSubview(toBack: topBarImage)
         
         topBarImage.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
-        topBarImage.bottomAnchor.constraint(equalTo: self.view.topAnchor, constant: 36).isActive = true
+        topBarImage.bottomAnchor.constraint(equalTo: self.view.topAnchor, constant: 40).isActive = true
         topBarImage.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
-        topBarImage.heightAnchor.constraint(equalToConstant: 45).isActive = true
+        topBarImage.heightAnchor.constraint(equalToConstant: 80).isActive = true
     }
     
-    func sendTopBar() {
+    @objc func sendTopBar() {
         performSegue(withIdentifier: "unwindSegueToVC1", sender: self)
     }
 
@@ -126,6 +139,13 @@ class CategoriesTableViewController: UITableViewController {
         searchBar.delegate = self as? UISearchBarDelegate
         navigationItem.titleView = searchBar
 
+    }
+    
+    func setupBackground() {
+        let background = UIImage(named: "blueFlip")
+        let backgroundView = UIImageView(image: background)
+        backgroundView.frame = CGRect(x: 0, y: -200, width: Int(self.view.frame.width), height: (300 * (5 + 3)))
+        self.tableView.backgroundView = backgroundView
     }
 
     func searchBar(_ searchBar: UISearchBar, textDidChange textSearched: String) {

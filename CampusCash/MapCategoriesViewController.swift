@@ -18,6 +18,7 @@ class MapCategoriesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupBackground()
         
         arrayOfCategoriesData = [categoriesData(cell: 2, categoriesImage: #imageLiteral(resourceName: "zoomLocation"), categoriesLabel: "All"),
                                 categoriesData(cell: 2, categoriesImage: #imageLiteral(resourceName: "Automotive"), categoriesLabel: "Automotive"),
@@ -29,7 +30,7 @@ class MapCategoriesTableViewController: UITableViewController {
                                  categoriesData(cell: 2, categoriesImage: #imageLiteral(resourceName: "Retail"), categoriesLabel: "Retail"),
                                  categoriesData(cell: 2, categoriesImage: #imageLiteral(resourceName: "Salons"), categoriesLabel: "Salons"),
                                  categoriesData(cell: 2, categoriesImage: #imageLiteral(resourceName: "Services"), categoriesLabel: "Services"),
-                                 categoriesData(cell: 2, categoriesImage: #imageLiteral(resourceName: "Tanning"), categoriesLabel: "Tanning")]
+                                 categoriesData(cell: 2, categoriesImage: #imageLiteral(resourceName: "Tanning"), categoriesLabel: "Tanning"), categoriesData(cell: 2, categoriesImage: #imageLiteral(resourceName: "nil"), categoriesLabel: ""), categoriesData(cell: 2, categoriesImage: #imageLiteral(resourceName: "nil"), categoriesLabel: "")]
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,6 +42,13 @@ class MapCategoriesTableViewController: UITableViewController {
         return arrayOfCategoriesData.count
     }
     
+    func setupBackground() {
+        let background = UIImage(named: "blueFlip")
+        let backgroundView = UIImageView(image: background)
+        backgroundView.frame = CGRect(x: 0, y: -200, width: Int(self.view.frame.width), height: (300 * (5 + 3)))
+        self.tableView.backgroundView = backgroundView
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if arrayOfCategoriesData[indexPath.row].cell == 2 {
             
@@ -48,6 +56,9 @@ class MapCategoriesTableViewController: UITableViewController {
             
             cell.mainImageView.image = arrayOfCategoriesData[indexPath.row].categoriesImage
             cell.categoriesLabel.text = arrayOfCategoriesData[indexPath.row].categoriesLabel
+            
+            cell.backgroundColor = UIColor.clear
+            cell.selectionStyle = UITableViewCellSelectionStyle.none
             
             return cell
             
@@ -57,6 +68,9 @@ class MapCategoriesTableViewController: UITableViewController {
             
             cell.mainImageView.image = arrayOfCategoriesData[indexPath.row].categoriesImage
             cell.categoriesLabel.text = arrayOfCategoriesData[indexPath.row].categoriesLabel
+            
+            cell.backgroundColor = UIColor.clear
+            cell.selectionStyle = UITableViewCellSelectionStyle.none
             
             return cell
         }

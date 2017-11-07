@@ -50,6 +50,7 @@ class Coupon2TableViewController: UITableViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        self.navigationController?.navigationBar.tintColor = UIColor.black
         
         arrayOfCompanyData = [companyData(cell: 0, addressText: selectAddressText, phoneNumberText: selectPhoneNumberText, websiteText: selectWebsiteText, companyImage: selectCompanyImage, companyColor: selectCompanyColor)]
         arrayOfCouponData = [couponData(cell: 0, couponImage: selectCouponImage, foodImage: #imageLiteral(resourceName: "Corner4"), couponDetails: "DO NOT USE LEAVE AS A BLANK!DO NOT USE LEAVE AS A BLANK!DO NOT USE LEAVE AS A BLANK!DO NOT USE LEAVE AS A BLANK"),
@@ -70,7 +71,7 @@ class Coupon2TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayOfCouponData.count
+        return arrayOfCouponData.count + 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -90,6 +91,12 @@ class Coupon2TableViewController: UITableViewController {
             cell.backgroundColor = UIColor.clear
             
             cell.selectionStyle = UITableViewCellSelectionStyle.none
+            
+            return cell
+            
+        } else if indexPath.row == arrayOfCouponData.count {
+            
+            let cell = Bundle.main.loadNibNamed("TableViewCell5", owner: self, options: nil)?.first as! TableViewCell5
             
             return cell
             
@@ -118,7 +125,7 @@ class Coupon2TableViewController: UITableViewController {
         }
     }
     
-    func onClicLabel(sender:UITapGestureRecognizer) {
+    @objc func onClicLabel(sender:UITapGestureRecognizer) {
         let string = "http://www."
         let url =  string + selectWebsiteText
         openUrl(urlString: url)
@@ -139,37 +146,37 @@ class Coupon2TableViewController: UITableViewController {
 
         if selectCompanyColor == "blue" {
             let background = CAGradientLayer().blueColor()
-            background.frame = CGRect(x: 0, y: 0, width: 414, height: 400 * arrayOfCouponData.count)
+            background.frame = CGRect(x: 0, y: 0, width: 414, height: 400 * (arrayOfCouponData.count+2))
             self.view.layer.insertSublayer(background, at: 0)
             
             let blurEffect = UIBlurEffect(style: .extraLight)
             let blurEffectView = UIVisualEffectView(effect: blurEffect)
-            blurEffectView.frame = CGRect(x: 0, y: 0, width: 414, height: 400 * arrayOfCouponData.count)
+            blurEffectView.frame = CGRect(x: 0, y: 0, width: 414, height: 400 * (arrayOfCouponData.count+2))
             self.view.insertSubview(blurEffectView, at: 0)
 
         } else if selectCompanyColor == "red" {
             let background = CAGradientLayer().redColor()
-            background.frame = CGRect(x: 0, y: 0, width: 414, height: 400 * arrayOfCouponData.count)
+            background.frame = CGRect(x: 0, y: 0, width: 414, height: 400 * (arrayOfCouponData.count+2))
             self.view.layer.insertSublayer(background, at: 0)
             
             let blurEffect = UIBlurEffect(style: .extraLight)
             let blurEffectView = UIVisualEffectView(effect: blurEffect)
-            blurEffectView.frame = CGRect(x: 0, y: 0, width: 414, height: 400 * arrayOfCouponData.count)
+            blurEffectView.frame = CGRect(x: 0, y: 0, width: 414, height: 400 * (arrayOfCouponData.count+2))
             self.view.insertSubview(blurEffectView, at: 0)
 
         } else if selectCompanyColor == "grey" {
             let background = CAGradientLayer().greyColor()
-            background.frame = CGRect(x: 0, y: 0, width: 414, height: 400 * arrayOfCouponData.count)
+            background.frame = CGRect(x: 0, y: 0, width: 414, height: 400 * (arrayOfCouponData.count+2))
             self.view.layer.insertSublayer(background, at: 0)
             
             let blurEffect = UIBlurEffect(style: .extraLight)
             let blurEffectView = UIVisualEffectView(effect: blurEffect)
-            blurEffectView.frame = CGRect(x: 0, y: 0, width: 414, height: 400 * arrayOfCouponData.count)
+            blurEffectView.frame = CGRect(x: 0, y: 0, width: 414, height: 400 * (arrayOfCouponData.count+2))
             self.view.insertSubview(blurEffectView, at: 0)
 
         } else {
             let background = CAGradientLayer().greyColor()
-            background.frame = CGRect(x: 0, y: 0, width: 414, height: 400 * arrayOfCouponData.count)
+            background.frame = CGRect(x: 0, y: 0, width: 414, height: 400 * (arrayOfCouponData.count+2))
             self.view.layer.insertSublayer(background, at: 0)
 
         }
@@ -196,7 +203,7 @@ class Coupon2TableViewController: UITableViewController {
         }
     }
     
-    func sendAlready() {
+    @objc func sendAlready() {
         let alert = UIAlertController(title: "Redeem Coupon?", message: "This coupon will be removed after the redeem button has been pressed!", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { action in
@@ -222,6 +229,8 @@ class Coupon2TableViewController: UITableViewController {
         
         if indexPath.row == 0 {
             return 287
+        } else if indexPath.row == arrayOfCouponData.count {
+            return 500
         } else {
             return 366
         }
