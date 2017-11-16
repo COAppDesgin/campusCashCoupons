@@ -22,6 +22,8 @@
 		4D5841E01F7C55D800E22655 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5841DF1F7C55D800E22655 /* MapKit.framework */; };
 		4D5841E21F7C568700E22655 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5841E11F7C568700E22655 /* MapViewController.swift */; };
 		4D5841E51F7C5BA600E22655 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5841E41F7C5BA600E22655 /* LocationManager.swift */; };
+		4D5A02421FAA9C5C005D3A38 /* TableViewCell1REWORK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5A02401FAA9C5C005D3A38 /* TableViewCell1REWORK.swift */; };
+		4D5A02431FAA9C5C005D3A38 /* TableViewCell1REWORK.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5A02411FAA9C5C005D3A38 /* TableViewCell1REWORK.xib */; };
 		4D7820621F605588005C2EDF /* Coupon2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7820611F605588005C2EDF /* Coupon2TableViewController.swift */; };
 		4D7820641F606762005C2EDF /* CAGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7820631F606762005C2EDF /* CAGradientLayer.swift */; };
 		4D7820671F6885D1005C2EDF /* TableViewCell4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7820651F6885D1005C2EDF /* TableViewCell4.swift */; };
@@ -30,8 +32,8 @@
 		4D99BEA71F90006D00886E09 /* CustomAnnotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D99BEA61F90006D00886E09 /* CustomAnnotations.swift */; };
 		4D99BEC01F9002B900886E09 /* CustomCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D99BEB21F9002B900886E09 /* CustomCalloutView.swift */; };
 		4D99BEC11F9002B900886E09 /* CustomCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D99BEB31F9002B900886E09 /* CustomCalloutView.xib */; };
-		4DA27DC01F97F2C20007E2B2 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA27DBF1F97F2C20007E2B2 /* SWRevealViewController.m */; };
 		4DA27DC21F98087D0007E2B2 /* MapCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA27DC11F98087D0007E2B2 /* MapCategoriesViewController.swift */; };
+		4DA789911FAAE886009D5391 /* RecentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA789901FAAE886009D5391 /* RecentTableViewController.swift */; };
 		4DAFBE5E1F3D5AE700CFBF57 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DAFBE5D1F3D5AE700CFBF57 /* GoogleService-Info.plist */; };
 		4DAFBE601F3D5B4800CFBF57 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAFBE5F1F3D5B4800CFBF57 /* Launch Screen.storyboard */; };
 		4DAFBE631F3D5C2800CFBF57 /* secondSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAFBE621F3D5C2800CFBF57 /* secondSegue.swift */; };
@@ -40,6 +42,9 @@
 		4DAFBE691F3D5C8D00CFBF57 /* CampusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAFBE681F3D5C8D00CFBF57 /* CampusTableViewController.swift */; };
 		4DAFBE741F3D750600CFBF57 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAFBE731F3D750600CFBF57 /* SearchTableViewController.swift */; };
 		4DBB9EB31F9005630015CACE /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBB9EB21F9005630015CACE /* AnnotationView.swift */; };
+		4DBDA54D1FB02BF600963AA3 /* SWRevealViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 4D7A85BC1FB02B150065BFEB /* SWRevealViewController.h */; };
+		4DD9F2AA1FAE5BE10015A3E1 /* TableViewCell5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9F2A81FAE5BE10015A3E1 /* TableViewCell5.swift */; };
+		4DD9F2AB1FAE5BE10015A3E1 /* TableViewCell5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DD9F2A91FAE5BE10015A3E1 /* TableViewCell5.xib */; };
 		99D73A011F3AD54900257F14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D73A001F3AD54900257F14 /* AppDelegate.swift */; };
 		99D73A031F3AD54A00257F14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D73A021F3AD54A00257F14 /* ViewController.swift */; };
 		99D73A061F3AD54A00257F14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D73A041F3AD54A00257F14 /* Main.storyboard */; };
@@ -86,17 +91,19 @@
 		4D5841DF1F7C55D800E22655 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4D5841E11F7C568700E22655 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4D5841E41F7C5BA600E22655 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		4D5A02401FAA9C5C005D3A38 /* TableViewCell1REWORK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell1REWORK.swift; sourceTree = "<group>"; };
+		4D5A02411FAA9C5C005D3A38 /* TableViewCell1REWORK.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell1REWORK.xib; sourceTree = "<group>"; };
 		4D7820611F605588005C2EDF /* Coupon2TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coupon2TableViewController.swift; sourceTree = "<group>"; };
 		4D7820631F606762005C2EDF /* CAGradientLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAGradientLayer.swift; sourceTree = "<group>"; };
 		4D7820651F6885D1005C2EDF /* TableViewCell4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell4.swift; sourceTree = "<group>"; };
 		4D7820661F6885D1005C2EDF /* TableViewCell4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell4.xib; sourceTree = "<group>"; };
+		4D7A85BC1FB02B150065BFEB /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		4D99BEA21F8FF7BD00886E09 /* couponSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = couponSegue.swift; sourceTree = "<group>"; };
 		4D99BEA61F90006D00886E09 /* CustomAnnotations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotations.swift; sourceTree = "<group>"; };
 		4D99BEB21F9002B900886E09 /* CustomCalloutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCalloutView.swift; sourceTree = "<group>"; };
 		4D99BEB31F9002B900886E09 /* CustomCalloutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCalloutView.xib; sourceTree = "<group>"; };
-		4DA27DBE1F97F2C20007E2B2 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		4DA27DBF1F97F2C20007E2B2 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		4DA27DC11F98087D0007E2B2 /* MapCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCategoriesViewController.swift; sourceTree = "<group>"; };
+		4DA789901FAAE886009D5391 /* RecentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentTableViewController.swift; sourceTree = "<group>"; };
 		4DAFBE5D1F3D5AE700CFBF57 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4DAFBE5F1F3D5B4800CFBF57 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		4DAFBE611F3D5BFF00CFBF57 /* CampusCash.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CampusCash.entitlements; sourceTree = "<group>"; };
@@ -107,6 +114,8 @@
 		4DAFBE721F3D717D00CFBF57 /* PureLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
 		4DAFBE731F3D750600CFBF57 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		4DBB9EB21F9005630015CACE /* AnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnnotationView.swift; path = "../../../../../Downloads/CustomCalloutView-Final Project 2/CustomCalloutView/AnnotationView.swift"; sourceTree = "<group>"; };
+		4DD9F2A81FAE5BE10015A3E1 /* TableViewCell5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell5.swift; sourceTree = "<group>"; };
+		4DD9F2A91FAE5BE10015A3E1 /* TableViewCell5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell5.xib; sourceTree = "<group>"; };
 		55883FEE85958F1362E794A9 /* Pods_CampusCash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampusCash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65426CF38248BBF66EA47D8A /* Pods-CampusCashUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusCashUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CampusCashUITests/Pods-CampusCashUITests.release.xcconfig"; sourceTree = "<group>"; };
 		99D739FD1F3AD54900257F14 /* CampusCash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampusCash.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +193,15 @@
 			name = "Map Controllers";
 			sourceTree = "<group>";
 		};
+		4D7A85BB1FB02B150065BFEB /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4D7A85BC1FB02B150065BFEB /* SWRevealViewController.h */,
+			);
+			name = SWRevealViewController;
+			path = "../../../../../Downloads/SWRevealViewController-master 3/SWRevealViewController";
+			sourceTree = "<group>";
+		};
 		4D8CD4DC1F3E44920036A069 /* Segue */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,12 +220,16 @@
 				4D99BEAA1F9002B900886E09 /* CustomCalloutView */,
 				4D1E09EA1F3E0D6C008E25BE /* TableViewCell1.swift */,
 				4D1E09EB1F3E0D6C008E25BE /* TableViewCell1.xib */,
+				4D5A02401FAA9C5C005D3A38 /* TableViewCell1REWORK.swift */,
+				4D5A02411FAA9C5C005D3A38 /* TableViewCell1REWORK.xib */,
 				4D1E09F21F3E3061008E25BE /* TableViewCell2.swift */,
 				4D1E09F31F3E3061008E25BE /* TableViewCell2.xib */,
 				4D18FC4B1F4234B700173CE1 /* TableViewCell3.swift */,
 				4D18FC4C1F4234B700173CE1 /* TableViewCell3.xib */,
 				4D7820651F6885D1005C2EDF /* TableViewCell4.swift */,
 				4D7820661F6885D1005C2EDF /* TableViewCell4.xib */,
+				4DD9F2A81FAE5BE10015A3E1 /* TableViewCell5.swift */,
+				4DD9F2A91FAE5BE10015A3E1 /* TableViewCell5.xib */,
 				4D5841DD1F736A7B00E22655 /* NavigationViewController.swift */,
 			);
 			name = "View Cells";
@@ -233,16 +255,6 @@
 			);
 			name = CustomCalloutView;
 			path = "../../../../../Downloads/CustomCalloutView-Final Project/CustomCalloutView";
-			sourceTree = "<group>";
-		};
-		4DA27DBD1F97F2C20007E2B2 /* SWRevealViewController */ = {
-			isa = PBXGroup;
-			children = (
-				4DA27DBE1F97F2C20007E2B2 /* SWRevealViewController.h */,
-				4DA27DBF1F97F2C20007E2B2 /* SWRevealViewController.m */,
-			);
-			name = SWRevealViewController;
-			path = "../../../../../Downloads/SWRevealViewController-master 2/SWRevealViewController";
 			sourceTree = "<group>";
 		};
 		99D739F41F3AD54900257F14 = {
@@ -276,6 +288,7 @@
 				99D73A021F3AD54A00257F14 /* ViewController.swift */,
 				4DAFBE661F3D5C8700CFBF57 /* TabViewController.swift */,
 				4DAFBE731F3D750600CFBF57 /* SearchTableViewController.swift */,
+				4DA789901FAAE886009D5391 /* RecentTableViewController.swift */,
 				4D5841E31F7C569000E22655 /* Map Controllers */,
 				4D8CD4DC1F3E44920036A069 /* Segue */,
 				4D8CD4DE1F3E44CE0036A069 /* Category Controllers */,
@@ -283,7 +296,7 @@
 				99D73A041F3AD54A00257F14 /* Main.storyboard */,
 				4DAFBE5F1F3D5B4800CFBF57 /* Launch Screen.storyboard */,
 				99D73A071F3AD54A00257F14 /* Assets.xcassets */,
-				4DA27DBD1F97F2C20007E2B2 /* SWRevealViewController */,
+				4D7A85BB1FB02B150065BFEB /* SWRevealViewController */,
 				99D73A0C1F3AD54A00257F14 /* Info.plist */,
 				4DAFBE5D1F3D5AE700CFBF57 /* GoogleService-Info.plist */,
 				4D5841D41F6B1D4A00E22655 /* CampusCash-Bridging-Header.h */,
@@ -393,16 +406,22 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Hans von Clemm";
 				TargetAttributes = {
 					99D739FC1F3AD54900257F14 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 435YL82FQ2;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.DataProtection = {
+								enabled = 1;
+							};
 							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+							com.apple.Push = {
 								enabled = 1;
 							};
 						};
@@ -410,12 +429,14 @@
 					99D73A101F3AD54A00257F14 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 7VTWR2G39L;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 99D739FC1F3AD54900257F14;
 					};
 					99D73A1B1F3AD54A00257F14 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 7VTWR2G39L;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 99D739FC1F3AD54900257F14;
 					};
@@ -447,12 +468,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D1E09ED1F3E0D6C008E25BE /* TableViewCell1.xib in Resources */,
+				4DD9F2AB1FAE5BE10015A3E1 /* TableViewCell5.xib in Resources */,
 				99D73A081F3AD54A00257F14 /* Assets.xcassets in Resources */,
 				4D7820681F6885D1005C2EDF /* TableViewCell4.xib in Resources */,
 				4D99BEC11F9002B900886E09 /* CustomCalloutView.xib in Resources */,
 				99D73A061F3AD54A00257F14 /* Main.storyboard in Resources */,
 				4DAFBE601F3D5B4800CFBF57 /* Launch Screen.storyboard in Resources */,
 				4D1E09F51F3E3061008E25BE /* TableViewCell2.xib in Resources */,
+				4D5A02431FAA9C5C005D3A38 /* TableViewCell1REWORK.xib in Resources */,
 				4DAFBE5E1F3D5AE700CFBF57 /* GoogleService-Info.plist in Resources */,
 				4D18FC4E1F4234B700173CE1 /* TableViewCell3.xib in Resources */,
 			);
@@ -631,24 +654,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DBDA54D1FB02BF600963AA3 /* SWRevealViewController.h in Sources */,
 				ED1FCFC91F3BE78C00F94A17 /* firstSegue.swift in Sources */,
 				4D99BEA31F8FF7BD00886E09 /* couponSegue.swift in Sources */,
 				4D5841D81F73467900E22655 /* FinalViewController.swift in Sources */,
 				4D18FC4D1F4234B700173CE1 /* TableViewCell3.swift in Sources */,
 				4DAFBE691F3D5C8D00CFBF57 /* CampusTableViewController.swift in Sources */,
 				99D73A031F3AD54A00257F14 /* ViewController.swift in Sources */,
+				4DA789911FAAE886009D5391 /* RecentTableViewController.swift in Sources */,
 				4DAFBE651F3D5C8000CFBF57 /* CategoriesTableViewController.swift in Sources */,
 				4DAFBE631F3D5C2800CFBF57 /* secondSegue.swift in Sources */,
 				4D5841E21F7C568700E22655 /* MapViewController.swift in Sources */,
 				4D5841DE1F736A7B00E22655 /* NavigationViewController.swift in Sources */,
 				4D7820671F6885D1005C2EDF /* TableViewCell4.swift in Sources */,
 				4D1E09EC1F3E0D6C008E25BE /* TableViewCell1.swift in Sources */,
-				4DA27DC01F97F2C20007E2B2 /* SWRevealViewController.m in Sources */,
+				4D5A02421FAA9C5C005D3A38 /* TableViewCell1REWORK.swift in Sources */,
 				4DAFBE671F3D5C8700CFBF57 /* TabViewController.swift in Sources */,
 				4D5841E51F7C5BA600E22655 /* LocationManager.swift in Sources */,
 				4D18FC521F426E7200173CE1 /* Rotate.swift in Sources */,
 				4D99BEA71F90006D00886E09 /* CustomAnnotations.swift in Sources */,
 				4DBB9EB31F9005630015CACE /* AnnotationView.swift in Sources */,
+				4DD9F2AA1FAE5BE10015A3E1 /* TableViewCell5.swift in Sources */,
 				99D73A011F3AD54900257F14 /* AppDelegate.swift in Sources */,
 				4D99BEC01F9002B900886E09 /* CustomCalloutView.swift in Sources */,
 				4D7820621F605588005C2EDF /* Coupon2TableViewController.swift in Sources */,
@@ -713,7 +739,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -721,7 +749,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -744,7 +776,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -763,7 +795,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -771,7 +805,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -788,7 +826,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -802,14 +840,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = CampusCash/CampusCash.entitlements;
 				DEVELOPMENT_TEAM = 435YL82FQ2;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = CampusCash/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.coappdesign.campuscashcoupons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CampusCash/CampusCash-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_REFLECTION_METADATA_LEVEL = none;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -819,7 +863,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = CampusCash/CampusCash.entitlements;
 				DEVELOPMENT_TEAM = 435YL82FQ2;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = CampusCash/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -875,7 +921,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.coappdesign.campuscashcoupons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CampusCash/CampusCash-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_REFLECTION_METADATA_LEVEL = none;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -890,7 +939,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.COAppDesign.CampusCashTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CampusCash.app/CampusCash";
 			};
 			name = Debug;
@@ -906,7 +956,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.COAppDesign.CampusCashTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CampusCash.app/CampusCash";
 			};
 			name = Release;
@@ -921,7 +972,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.COAppDesign.CampusCashUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = CampusCash;
 			};
 			name = Debug;
@@ -936,7 +988,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.COAppDesign.CampusCashUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = CampusCash;
 			};
 			name = Release;
